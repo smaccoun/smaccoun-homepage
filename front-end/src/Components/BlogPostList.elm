@@ -78,7 +78,7 @@ viewBlogPostList posts =
                 []
                 (List.map viewBlogPostListThumb posts)
     in
-    div []
+    div [style [("margin", "28px")]]
         [ title H3 [] [ text "Latest" ]
         , columns blogPostColumnsModifiers
             []

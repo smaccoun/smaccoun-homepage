@@ -60,21 +60,19 @@ viewWelcomeScreen { context, response } =
 
 viewAllInfoCards : Html msg
 viewAllInfoCards =
-    div [ class "content" ]
-        [ columns infoColumnsModifiers
-            []
+    columns infoColumnsModifiers
+            [style []]
             [  column infoColumnModifiers [] [ viewInfoCard githubIcon ]
             ,  column infoColumnModifiers [] [ viewInfoCard blogIcon ]
             ,  column infoColumnModifiers [] [ viewInfoCard linkedinIcon ]
             ]
-        ]
 
 
 infoColumnsModifiers : ColumnsModifiers
 infoColumnsModifiers =
-    { multiline = False
+    { multiline = True
     , gap = Gap2
-    , display = TabletAndBeyond
+    , display = MobileAndBeyond
     , centered = True
     }
 
@@ -129,7 +127,7 @@ linkedinIcon =
 viewInfoCard : IconConfig -> Html msg
 viewInfoCard iconConfig =
     a [ href iconConfig.iconLink ]
-        [ card []
+        [ card [style [("padding-top", "20px")]]
             [ cardImage [] [ viewInfoLink iconConfig ]
             , cardContent [] [ text iconConfig.title ]
             ]

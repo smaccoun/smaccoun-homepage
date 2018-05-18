@@ -14,7 +14,7 @@ viewBlogPost { title, content } =
         fullPost =
             [ renderTitle title, renderContent content ]
     in
-    div [ class "content" ]
+    div [ class "content", style [("margin", "28px")]]
         [ columns blogPostColumnsModifiers
             []
             [ column blogPostColumnModifiers [] fullPost
