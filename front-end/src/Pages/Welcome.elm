@@ -63,7 +63,9 @@ viewAllInfoCards =
     div [ class "content" ]
         [ columns infoColumnsModifiers
             []
-            [ column infoColumnModifiers [] [ viewInfoCard blogIcon ]
+            [  column infoColumnModifiers [] [ viewInfoCard githubIcon ]
+            ,  column infoColumnModifiers [] [ viewInfoCard blogIcon ]
+            ,  column infoColumnModifiers [] [ viewInfoCard linkedinIcon ]
             ]
         ]
 
@@ -104,6 +106,23 @@ blogIcon =
     , title = "Blog"
     , iconSize = "120px"
     , iconLink = "/blogPost"
+    }
+
+githubIcon : IconConfig
+githubIcon =
+    { faIcon = "fab fa-github"
+    , title = "Github"
+    , iconSize = "120px"
+    , iconLink = "https://github.com/smaccoun"
+    }
+
+
+linkedinIcon : IconConfig
+linkedinIcon =
+    { faIcon = "fab fa-linkedin-in"
+    , title = "LinkedIn"
+    , iconSize = "120px"
+    , iconLink = "https://www.linkedin.com/in/steven-maccoun-b4448b38/"
     }
 
 

@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: smaccoun-homepage-frontend
-        image: "smaccoun/smaccoun-homepage-frontend:4fa03a93466062c0a048d0cdee5f028912a7d559"
+        image: "smaccoun/smaccoun-homepage-frontend:711ea1b11c26242d8943185973757194461978bf"
         ports:
             - containerPort: 5000
               name: "external"
