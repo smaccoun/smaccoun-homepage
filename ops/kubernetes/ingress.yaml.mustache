@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{appName}}-ing
+  annotations:
+    kubernetes.io/ingress.class: gce
+    kubernetes.io/ingress.global-static-ip-name: {{appName}}-ip
+    certmanager.k8s.io/cluster-issuer: letsencrypt-production
+  labels:
+    app: {{appName}}
+spec:
+  rules:
+  - host: api.{{domain}}
+    http:
+      paths:
+      - backend:
+          serviceName: {{appName}}-backend-service
+          servicePort: 8080
+        path: /*
+  tls:
+  - hosts:
+    - api.{{domain}}
+    secretName: letsencrypt-prod

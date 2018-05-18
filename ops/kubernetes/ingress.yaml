@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: smaccoun-homepage-ing
+  annotations:
+    kubernetes.io/ingress.class: gce
+    kubernetes.io/ingress.global-static-ip-name: smaccoun-homepage-ip
+    certmanager.k8s.io/cluster-issuer: letsencrypt-production
+  labels:
+    app: smaccoun-homepage
+spec:
+  rules:
+  - host: api.smaccoun.com
+    http:
+      paths:
+      - backend:
+          serviceName: smaccoun-homepage-backend-service
+          servicePort: 8080
+        path: /*
+  tls:
+  - hosts:
+    - api.smaccoun.com
+    secretName: letsencrypt-prod

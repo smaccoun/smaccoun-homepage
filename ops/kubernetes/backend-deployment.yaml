@@ -1,0 +1,64 @@
+kind: "Service"
+apiVersion: "v1"
+metadata:
+  name: smaccoun-homepage-backend-service
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: smaccoun-homepage
+    tier: backend
+---
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: smaccoun-homepage-backend-deployment
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+  strategy:
+    type: "RollingUpdate"  
+  selector:
+    matchLabels:
+      app: "smaccoun-homepage"
+      tier: backend
+      track: stable
+  template:
+    metadata:
+      labels:
+        app: "smaccoun-homepage"
+        tier: backend
+        track: stable
+    spec:
+      containers:
+        - name: "smaccoun-homepage-backend"
+          image: "smaccoun/smaccoun-homepage-backend:4fa03a93466062c0a048d0cdee5f028912a7d559"
+          envFrom:
+            - configMapRef:
+                name: "smaccoun-homepage-envvars" 
+          terminationMessagePath: "/tmp/my-log"   
+          resources:
+            requests:
+              memory: 10Mi
+              cpu: 50m
+            limits:
+              memory: 100Mi
+              cpu: 200m
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: external
+            initialDelaySeconds: 5
+            periodSeconds: 200
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: external
+            initialDelaySeconds: 5
+            periodSeconds: 200
+          ports:
+            - containerPort: 8080
+              name: "external"
+              protocol: "TCP"
