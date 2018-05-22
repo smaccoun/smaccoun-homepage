@@ -73,7 +73,7 @@ getConn = ask >>= getConnFromPool . getPool
 
 mkPool :: PGS.ConnectInfo -> IO (Pool PGS.Connection)
 mkPool con =
-  createPool start PGS.close 10 (0.5) 10
+  createPool start PGS.close 2 60 10
     where
       start = PGS.connect con
 

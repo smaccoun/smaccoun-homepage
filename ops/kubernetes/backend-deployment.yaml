@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
         - name: "smaccoun-homepage-backend"
-          image: "smaccoun/smaccoun-homepage-backend:df16d63b684b41d88633f6a338b4af02515e1711"
+          image: "smaccoun/smaccoun-homepage-backend:c92b757a1db4ed7051ad18fafa06a1f00dc0a338"
           envFrom:
             - configMapRef:
                 name: "smaccoun-homepage-envvars" 
@@ -73,3 +73,17 @@ spec:
                 secretKeyRef:
                   name: cloudsql-db-credentials
                   key: password
+        - name: cloudsql-proxy
+          image: gcr.io/cloudsql-docker/gce-proxy:1.11
+          command: ["/cloud_sql_proxy",
+                    "-instances=smaccoun-homepage:us-central1:smaccoun-homepage=tcp:5432",
+                    "-credential_file=/secrets/cloudsql/credentials.json"]
+          volumeMounts:
+            - name: cloudsql-instance-credentials
+              mountPath: /secrets/cloudsql
+              readOnly: true
+      volumes:
+        - name: cloudsql-instance-credentials
+          secret:
+            secretName: cloudsql-instance-credentials
+      # [END volumes]
