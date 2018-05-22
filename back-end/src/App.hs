@@ -79,7 +79,7 @@ mkPool con =
 
 envPool :: Environment -> Int
 envPool Test        = 1
-envPool Development = 1
+envPool Development = 8
 envPool Production  = 8
 
 

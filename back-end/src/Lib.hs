@@ -76,6 +76,7 @@ setAppConfig env args = do
 getDBConnection :: Environment -> IO PGPool
 getDBConnection env = do
     dbConfig <- getDBConnectionInfo  env
+    putStrLn $ (show dbConfig :: Text)
     mkPool $ connInfoToPG dbConfig
 
 

@@ -34,31 +34,50 @@ spec:
     spec:
       containers:
         - name: "smaccoun-homepage-backend"
-          image: "smaccoun/smaccoun-homepage-backend:711ea1b11c26242d8943185973757194461978bf"
+          image: "smaccoun/smaccoun-homepage-backend:20e5c96f2e6d66a0f379b828e060bbc3a576bc88"
           envFrom:
             - configMapRef:
                 name: "smaccoun-homepage-envvars" 
+          env:
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: cloudsql-db-credentials
+                  key: username
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: cloudsql-db-credentials
+                  key: password
           terminationMessagePath: "/tmp/my-log"   
-          resources:
-            requests:
-              memory: 10Mi
-              cpu: 50m
-            limits:
-              memory: 100Mi
-              cpu: 200m
           livenessProbe:
             httpGet:
               path: /health
               port: external
             initialDelaySeconds: 5
-            periodSeconds: 200
+            periodSeconds: 280
           readinessProbe:
             httpGet:
               path: /health
               port: external
             initialDelaySeconds: 5
-            periodSeconds: 200
+            periodSeconds: 280
           ports:
             - containerPort: 8080
               name: "external"
               protocol: "TCP"
+        - name: cloudsql-proxy
+          image: gcr.io/cloudsql-docker/gce-proxy:1.11
+          command: ["/cloud_sql_proxy",
+                    "-instances=smaccoun-homepage=tcp:5432",
+                    "-credential_file=/secrets/cloudsql/credentials.json"]
+          volumeMounts:
+            - name: cloudsql-instance-credentials
+              mountPath: /secrets/cloudsql
+              readOnly: true
+        # [END proxy_container]
+      # [START volumes]
+      volumes:
+        - name: cloudsql-instance-credentials
+          secret:
+            secretName: cloudsql-instance-credentials
