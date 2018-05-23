@@ -33,13 +33,11 @@ startApp charArgs = do
     env  <- lookupEnvDefault "SERVANT_ENV" Development
     port <- lookupEnvDefault "SERVANT_PORT" 8080
 
-    (config, logTo, dbConfig) <- setAppConfig env args
+    (config, logTo) <- setAppConfig env args
     let logger = getLogger config
 
     midware <- makeMiddleware logger env
     FL.pushLogStr logger $ FL.toLogStr $ logInitialMetaInfo port env logTo args
-    FL.pushLogStr logger $ FL.toLogStr (show dbConfig :: Text)
-
     Warp.run port
       $ midware
       $ app config
@@ -57,9 +55,9 @@ logInitialMetaInfo port env logTo args =
       ]
 
 
-setAppConfig :: Environment -> [Text] -> IO (App.Config, LogTo, DBConfig)
+setAppConfig :: Environment -> [Text] -> IO (App.Config, LogTo)
 setAppConfig env args = do
-    (pool, dbConfig) <- startDBConnection env
+    pool <- getDBConnection env
     logTo <- case listToMaybe args of
       Just filename -> return $ File filename
       Nothing       -> lookupEnvDefault "SERVANT_LOG" STDOut
@@ -73,13 +71,12 @@ setAppConfig env args = do
             Right j -> j
             Left e  -> panic $ "BAD JWK: " <> T.pack e <> ". From reading: " <> (decodeUtf8 $ LBS.toStrict jwkJsonString)
 
-    return (Config logger pool jwk, logTo, dbConfig)
+    return (Config logger pool jwk, logTo)
 
-startDBConnection :: Environment -> IO (PGPool, DBConfig)
-startDBConnection env = do
+getDBConnection :: Environment -> IO PGPool
+getDBConnection env = do
     dbConfig <- getDBConnectionInfo  env
-    pool <- mkPool $ connInfoToPG dbConfig
-    return (pool, dbConfig)
+    mkPool $ connInfoToPG dbConfig
 
 
 app :: App.Config -> Wai.Application

@@ -1,6 +1,5 @@
-{-# LANGUAGE DataKinds      #-}
-{-# LANGUAGE DeriveAnyClass #-}
-{-# LANGUAGE TypeOperators  #-}
+{-# LANGUAGE DataKinds     #-}
+{-# LANGUAGE TypeOperators #-}
 
 module Config.DBConfig where
 
@@ -18,7 +17,7 @@ data DBConfig =
     ,dbSchema   :: Maybe T.Text
     ,dbUsername :: T.Text
     ,dbPassword :: T.Text
-    } deriving (Generic, Show)
+    }
 
 
 getDBConnectionInfo :: Environment -> IO DBConfig
