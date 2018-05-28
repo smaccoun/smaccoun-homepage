@@ -6,74 +6,57 @@ import           Api.Resource
 import           App
 import           AppPrelude
 import           Data.Aeson
-import           Data.Time.Clock          (getCurrentTime)
 import           Data.UUID                (UUID)
-import           Database.Beam
-import           Database.Beam.Postgres
 import           Database.Crud
 import           Database.MasterEntity
 import           Database.Schema
 import           Database.Tables.BlogPost
-import           Database.Transaction
-import           Models.User
+import           Models.User              (UserResponse (..))
+import           Pagination
 import           Servant
 
 
-type BlogPostViewAPI = RResourceAPI "blogPost" BlogPostEntity UUID
+type BlogPostViewAPI = RResourceAPI "blogPost" PaginatedResult BlogPostEntity UUID
 
 blogPostViewServer :: ServerT BlogPostViewAPI AppM
 blogPostViewServer = rResourceServer getBlogPosts getBlogPost
 
-getBlogPosts :: AppM [BlogPostEntity]
-getBlogPosts = do
+getBlogPosts :: (MonadIO m, MonadReader r m, HasDBConn r)
+                => GetCollectionServer m PaginatedResult BlogPostEntity
+getBlogPosts =
   getEntities blogPostTable
 
-getBlogPost :: UUID -> AppM BlogPostEntity
-getBlogPost blogPostId' = do
+
+getBlogPost :: (MonadIO m, HasDBConn r, MonadReader r m) =>
+                UUID -> m (AppEntity BlogPostBaseT Identity)
+getBlogPost blogPostId' =
   getEntity blogPostTable blogPostId'
 
 type BlogPostMutateAPI = "blogPost" :>
-  ( ReqBody '[JSON] BlogPost :> Post '[JSON] NoContent
-  :<|> (
-          Capture "uuid" UUID
-        :> ReqBody '[JSON] BlogPost :> Patch '[JSON] ()
-       )
-  )
+       CreateAPI BlogPost BlogPostEntity
+  :<|> UpdateAPI BlogPost UUID
 
 instance FromJSON BlogPost
 
-blogPostMutateServer ::
-      UserResponse
-  -> ServerT BlogPostMutateAPI AppM
+blogPostMutateServer :: (HasDBConn r2, HasDBConn r1,
+                          MonadReader r2 m2, MonadReader r1 m1, MonadIO m2, MonadIO m1) =>
+                        UserResponse
+                        -> (BlogPost -> m1 BlogPostEntity)
+                      :<|> (UUID -> BlogPost -> m2 ())
 blogPostMutateServer _ =
        createBlogPost
   :<|> updateBlogPost
 
-createBlogPost :: BlogPost -> AppM NoContent
-createBlogPost bpr = do
-  now <- liftIO getCurrentTime
-  _ <- runInsertM $ insertStmt now
-  return NoContent
-  where
-    insertStmt now = insert blogPostTable $
-        insertExpressions
-          [ AppEntity
-              default_
-              (BlogPostBaseT (val_ $ title bpr) (val_ $ content bpr))
-              default_
-              (val_ now)
-          ]
+createBlogPost :: (MonadIO m, MonadReader r m, HasDBConn r)
+                  => BlogPostBaseT Identity
+                  -> m BlogPostEntity
+createBlogPost bpr =
+  createEntity blogPostTable bpr
 
 
-updateBlogPost :: UUID -> BlogPost -> AppM ()
-updateBlogPost blogPostId' bpr = do
-  runSqlM blogUpdateQ
-  where
-    blogUpdateQ :: Pg ()
-    blogUpdateQ = do
-      Just bp <- runSelectReturningOne $
-              lookup_ blogPostTable (MyAppKey blogPostId')
-      runUpdate $
-            save (blogPostTable)
-                (bp { _table = bpr })
+updateBlogPost :: (MonadIO m, MonadReader r m, HasDBConn r)
+                => UUID
+                -> BlogPost
+                -> m ()
+updateBlogPost = updateByID blogPostTable
 
