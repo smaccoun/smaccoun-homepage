@@ -60,19 +60,19 @@ viewWelcomeScreen { context, response } =
 
 viewAllInfoCards : Html msg
 viewAllInfoCards =
-    columns infoColumnsModifiers
-            [style []]
-            [  column infoColumnModifiers [] [ viewInfoCard githubIcon ]
-            ,  column infoColumnModifiers [] [ viewInfoCard blogIcon ]
-            ,  column infoColumnModifiers [] [ viewInfoCard linkedinIcon ]
+    div [ class "content" ]
+        [ columns infoColumnsModifiers
+            []
+            [ column infoColumnModifiers [] [ viewInfoCard blogIcon ]
             ]
+        ]
 
 
 infoColumnsModifiers : ColumnsModifiers
 infoColumnsModifiers =
-    { multiline = True
+    { multiline = False
     , gap = Gap2
-    , display = MobileAndBeyond
+    , display = TabletAndBeyond
     , centered = True
     }
 
@@ -106,28 +106,11 @@ blogIcon =
     , iconLink = "/blogPost"
     }
 
-githubIcon : IconConfig
-githubIcon =
-    { faIcon = "fab fa-github"
-    , title = "Github"
-    , iconSize = "120px"
-    , iconLink = "https://github.com/smaccoun"
-    }
-
-
-linkedinIcon : IconConfig
-linkedinIcon =
-    { faIcon = "fab fa-linkedin-in"
-    , title = "LinkedIn"
-    , iconSize = "120px"
-    , iconLink = "https://www.linkedin.com/in/steven-maccoun-b4448b38/"
-    }
-
 
 viewInfoCard : IconConfig -> Html msg
 viewInfoCard iconConfig =
     a [ href iconConfig.iconLink ]
-        [ card [style [("padding-top", "20px")]]
+        [ card []
             [ cardImage [] [ viewInfoLink iconConfig ]
             , cardContent [] [ text iconConfig.title ]
             ]

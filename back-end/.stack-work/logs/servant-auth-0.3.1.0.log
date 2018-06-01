@@ -1,0 +1,6 @@
+Configuring servant-auth-0.3.1.0...
+Preprocessing library for servant-auth-0.3.1.0..
+Building library for servant-auth-0.3.1.0..
+[1 of 1] Compiling Servant.Auth     ( src/Servant/Auth.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Servant/Auth.o )
+Installing library in /Users/stevenmaccoun/projects/smaccoun-homepage/back-end/.stack-work/install/x86_64-osx/lts-11.2/8.2.2/lib/x86_64-osx-ghc-8.2.2/servant-auth-0.3.1.0-Fj3WNfivZPcKDmPCEfhEYt
+Registering library for servant-auth-0.3.1.0..

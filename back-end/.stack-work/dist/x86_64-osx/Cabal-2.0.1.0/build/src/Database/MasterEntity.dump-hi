@@ -1,0 +1,349 @@
+
+==================== FINAL INTERFACE ====================
+2018-06-01 20:39:29.948078 UTC
+
+interface api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Database.MasterEntity [family instance module] 8022
+  interface hash: 13a66e614301830581babfac06b29a05
+  ABI hash: b1a2d4b24895229e053ed42d9c8dc9a1
+  export-list hash: f1d85d73fc437a442b6c478d886c31af
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 3a5dbe741e334c9921cd951a476d70d7
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  Database.MasterEntity.appId
+  Database.MasterEntity.baseTable
+  Database.MasterEntity.created_at
+  Database.MasterEntity.dropLensUnderOption
+  Database.MasterEntity.updated_at
+  Database.MasterEntity.AppEntity{Database.MasterEntity.AppEntity _appId _baseTable _created_at _updated_at}
+  Database.Beam.Schema.Tables.PrimaryKey{Database.MasterEntity.MyAppKey}
+module dependencies: AppPrelude
+package dependencies: StateVar-1.1.0.4 adjunctions-4.4
+                      aeson-1.2.4.0 array-0.5.2.0 async-2.1.1.1 attoparsec-0.13.2.2
+                      base-4.10.1.0 base-compat-0.9.3 base-orphans-0.7 beam-core-0.7.2.1
+                      bifunctors-5.5.2 binary-0.8.5.1 bytestring-0.10.8.2
+                      call-stack-0.1.0 comonad-5.0.3 containers-0.5.10.2
+                      contravariant-1.4.1 deepseq-1.4.3.0 distributive-0.5.3
+                      dlist-0.8.0.4 exceptions-0.8.3 finite-typelits-0.1.3.0 free-4.12.4
+                      ghc-boot-th-8.2.2 ghc-prim-0.5.1.1 hashable-1.2.7.0
+                      integer-gmp-1.0.1.0 integer-logarithms-1.0.2.1 kan-extensions-5.1
+                      lens-4.16.1 microlens-0.4.8.3 mtl-2.2.2 prelude-extras-0.4.0.3
+                      pretty-1.1.3.3 primitive-0.6.3.0 profunctors-5.2.2 protolude-0.2.1
+                      random-1.1 reflection-2.1.3 safe-0.3.17 scientific-0.3.5.3
+                      semigroupoids-5.2.2 stm-2.4.5.0 tagged-0.8.5
+                      template-haskell-2.12.0.0 text-1.2.3.0 th-abstraction-0.2.6.0
+                      time-1.8.0.2 time-locale-compat-0.1.1.3 transformers-0.5.2.0
+                      transformers-compat-0.5.1.4 unordered-containers-0.2.9.0
+                      uuid-1.3.13 uuid-types-1.0.3 vector-0.12.0.1 vector-sized-0.6.1.0
+orphans: reflection-2.1.3:Data.Reflection
+         attoparsec-0.13.2.2:Data.Attoparsec.Text.Internal
+         attoparsec-0.13.2.2:Data.Attoparsec.ByteString.Char8
+         vector-0.12.0.1:Data.Vector.Unboxed
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         beam-core-0.7.2.1:Database.Beam.Backend.Types
+         stm-2.4.5.0:Control.Monad.STM
+         hashable-1.2.7.0:Data.Hashable.Generic text-1.2.3.0:Data.Text.Lazy
+         text-1.2.3.0:Data.Text binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.0:Data.Text.Show base-orphans-0.7:Data.Orphans
+         vector-0.12.0.1:Data.Vector.Fusion.Bundle
+         transformers-0.5.2.0:Control.Monad.Trans.Error
+         base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: adjunctions-4.4:Data.Functor.Rep
+                         aeson-1.2.4.0:Data.Aeson.Types.Internal
+                         attoparsec-0.13.2.2:Data.Attoparsec.Internal.Types
+                         base-4.10.1.0:Control.Applicative base-4.10.1.0:Data.Complex
+                         base-4.10.1.0:Data.Either base-4.10.1.0:Data.Functor.Compose
+                         base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats
+                         beam-core-0.7.2.1:Database.Beam.Backend.SQL.AST
+                         beam-core-0.7.2.1:Database.Beam.Backend.SQL.Builder
+                         beam-core-0.7.2.1:Database.Beam.Backend.Types
+                         beam-core-0.7.2.1:Database.Beam.Query.Combinators
+                         beam-core-0.7.2.1:Database.Beam.Query.CustomSQL
+                         beam-core-0.7.2.1:Database.Beam.Query.Internal
+                         beam-core-0.7.2.1:Database.Beam.Query.Types
+                         beam-core-0.7.2.1:Database.Beam.Schema.Tables
+                         bifunctors-5.5.2:Data.Bifunctor.Biff
+                         bifunctors-5.5.2:Data.Bifunctor.Clown
+                         bifunctors-5.5.2:Data.Bifunctor.Fix
+                         bifunctors-5.5.2:Data.Bifunctor.Flip
+                         bifunctors-5.5.2:Data.Bifunctor.Join
+                         bifunctors-5.5.2:Data.Bifunctor.Joker
+                         bifunctors-5.5.2:Data.Bifunctor.Product
+                         bifunctors-5.5.2:Data.Bifunctor.Sum
+                         bifunctors-5.5.2:Data.Bifunctor.Tannen
+                         bifunctors-5.5.2:Data.Bifunctor.Wrapped
+                         containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal containers-0.5.10.2:Data.Tree
+                         dlist-0.8.0.4:Data.DList
+                         finite-typelits-0.1.3.0:Data.Finite.Internal
+                         ghc-boot-th-8.2.2:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.2.2:GHC.LanguageExtensions.Type
+                         kan-extensions-5.1:Data.Functor.Day
+                         kan-extensions-5.1:Data.Functor.Yoneda lens-4.16.1:Control.Lens.At
+                         lens-4.16.1:Control.Lens.Internal.Indexed
+                         lens-4.16.1:Control.Lens.Reified lens-4.16.1:Control.Lens.Tuple
+                         lens-4.16.1:Control.Lens.Wrapped lens-4.16.1:Control.Lens.Zoom
+                         microlens-0.4.8.3:Lens.Micro.Internal
+                         pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.3.0:Control.Monad.Primitive
+                         primitive-0.6.3.0:Data.Primitive.Array
+                         primitive-0.6.3.0:Data.Primitive.ByteArray
+                         profunctors-5.2.2:Data.Profunctor.Composition
+                         profunctors-5.2.2:Data.Profunctor.Rep tagged-0.8.5:Data.Tagged
+                         template-haskell-2.12.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.3.0:Data.Text text-1.2.3.0:Data.Text.Lazy
+                         th-abstraction-0.2.6.0:Language.Haskell.TH.Datatype
+                         unordered-containers-0.2.9.0:Data.HashMap.Base
+                         unordered-containers-0.2.9.0:Data.HashSet
+                         uuid-types-1.0.3:Data.UUID.Types.Internal
+                         uuid-types-1.0.3:Data.UUID.Types.Internal.Builder
+                         vector-0.12.0.1:Data.Vector vector-0.12.0.1:Data.Vector.Primitive
+                         vector-0.12.0.1:Data.Vector.Storable
+                         vector-0.12.0.1:Data.Vector.Unboxed
+                         vector-0.12.0.1:Data.Vector.Unboxed.Base
+                         vector-sized-0.6.1.0:Data.Vector.Generic.Sized
+import  -/  aeson-1.2.4.0:Data.Aeson 5cd84e444e6f60fb8f170777913acd80
+import  -/  aeson-1.2.4.0:Data.Aeson.Types.Internal 55e6fd0bcfbbd06588aa31f720b82778
+import  -/  aeson-1.2.4.0:Data.Aeson.Types.ToJSON 86962dfb20db2e0af4020bc2a73f050b
+import  -/  AppPrelude 8b403b19a73477bf6ded351e8350cfb7
+  exports: 833a269d86971bb6039e3484bfdc1a18
+import  -/  base-4.10.1.0:Data.Function e8e43d925cd2e5608dfc5d809f4ae5e4
+import  -/  base-4.10.1.0:Data.Functor 2ffda4f936b8f474394d93205750aff3
+import  -/  base-4.10.1.0:Data.Functor.Identity aae7a3124ea5423ea52291a312b43abe
+import  -/  base-4.10.1.0:Data.Typeable.Internal b31684019ac02e3213b270a8482ac844
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.Generics c2a8006cab1f0055555a6c72607a574b
+import  -/  base-4.10.1.0:GHC.List e3060fbeb44ce0038e6b4dedf2dd9cf1
+import  -/  beam-core-0.7.2.1:Database.Beam 35fd6826a8eadad243d13d0152a13f87
+import  -/  beam-core-0.7.2.1:Database.Beam.Schema.Tables 05807973f142cbe0c80293f956245dbc
+import  -/  lens-4.16.1:Control.Lens b059236cf12a31b766c6d83fadcf9b94
+import  -/  lens-4.16.1:Control.Lens.Getter 15aec3abfcb276acdf90548453e568d9
+import  -/  lens-4.16.1:Control.Lens.TH 6a3639e0ee2e0955470d343c18fd9a50
+import  -/  lens-4.16.1:Control.Lens.Type 844f5962ececfca1051d024bb57ea80e
+import  -/  time-1.8.0.2:Data.Time.Clock 0be19986496eb539759244fa723c728c
+import  -/  time-1.8.0.2:Data.Time.Clock.Internal.UTCTime 32a32c3d6ff3838e939311c0e62b0a98
+import  -/  uuid-1.3.13:Data.UUID 9dd9964dd06b99da446fcd0318531d8a
+import  -/  uuid-types-1.0.3:Data.UUID.Types.Internal 96892a6df3f6e25ffcf1993a410236b6
+207352dddc77c697348836ee95993208
+  $fBeamableAppEntity ::
+    Database.Beam.Schema.Tables.Beamable table =>
+    Database.Beam.Schema.Tables.Beamable
+      (Database.MasterEntity.AppEntity table)
+  DFunId
+207352dddc77c697348836ee95993208
+  $fBeamablePrimaryKey ::
+    Database.Beam.Schema.Tables.Beamable
+      (Database.Beam.Schema.Tables.PrimaryKey
+         (Database.MasterEntity.AppEntity table))
+  DFunId
+207352dddc77c697348836ee95993208
+  $fGenericAppEntity ::
+    GHC.Generics.Generic (Database.MasterEntity.AppEntity table f)
+  DFunId
+207352dddc77c697348836ee95993208
+  $fGenericPrimaryKey ::
+    GHC.Generics.Generic
+      (Database.Beam.Schema.Tables.PrimaryKey
+         (Database.MasterEntity.AppEntity table) f)
+  DFunId
+207352dddc77c697348836ee95993208
+  $fTableAppEntity ::
+    (Database.Beam.Schema.Tables.Beamable table,
+     Data.Typeable.Internal.Typeable table) =>
+    Database.Beam.Schema.Tables.Table
+      (Database.MasterEntity.AppEntity table)
+  DFunId
+207352dddc77c697348836ee95993208
+  $fToJSONAppEntity ::
+    Data.Aeson.Types.ToJSON.ToJSON
+      (t Data.Functor.Identity.Identity) =>
+    Data.Aeson.Types.ToJSON.ToJSON
+      (Database.MasterEntity.AppEntity t Data.Functor.Identity.Identity)
+  DFunId
+207352dddc77c697348836ee95993208
+  $sel:_appId:AppEntity ::
+    Database.MasterEntity.AppEntity table f
+    -> Database.Beam.Schema.Tables.C f Data.UUID.Types.Internal.UUID
+  RecSel Left Database.MasterEntity.AppEntity
+207352dddc77c697348836ee95993208
+  $sel:_baseTable:AppEntity ::
+    Database.MasterEntity.AppEntity table f -> table f
+  RecSel Left Database.MasterEntity.AppEntity
+207352dddc77c697348836ee95993208
+  $sel:_created_at:AppEntity ::
+    Database.MasterEntity.AppEntity table f
+    -> Database.Beam.Schema.Tables.C
+         f Data.Time.Clock.Internal.UTCTime.UTCTime
+  RecSel Left Database.MasterEntity.AppEntity
+207352dddc77c697348836ee95993208
+  $sel:_updated_at:AppEntity ::
+    Database.MasterEntity.AppEntity table f
+    -> Database.Beam.Schema.Tables.C
+         f Data.Time.Clock.Internal.UTCTime.UTCTime
+  RecSel Left Database.MasterEntity.AppEntity
+bc7c6c1cec60dcbb14410b67b6a8bc49
+  $tcAppEntity :: GHC.Types.TyCon
+b8dace75a795af2d85f0d15a1b9b2be1
+  $trModule :: GHC.Types.Module
+207352dddc77c697348836ee95993208
+  type role AppEntity representational nominal
+  data AppEntity (table :: (* -> *) -> *) (f :: * -> *)
+    = AppEntity {_appId :: Database.Beam.Schema.Tables.C
+                             f Data.UUID.Types.Internal.UUID,
+                 _baseTable :: table f,
+                 _created_at :: Database.Beam.Schema.Tables.C
+                                  f Data.Time.Clock.Internal.UTCTime.UTCTime,
+                 _updated_at :: Database.Beam.Schema.Tables.C
+                                  f Data.Time.Clock.Internal.UTCTime.UTCTime}
+207352dddc77c697348836ee95993208
+  axiom Database.MasterEntity.D:R:PrimaryKeyAppEntityf0::
+    [(table :: (* -> *) -> *)]
+      Database.Beam.Schema.Tables.PrimaryKey
+        (Database.MasterEntity.AppEntity table)
+        = Database.MasterEntity.R:PrimaryKeyAppEntityf table
+207352dddc77c697348836ee95993208
+  data instance Database.Beam.Schema.Tables.PrimaryKey
+                  (Database.MasterEntity.AppEntity table) f
+    = MyAppKey (Database.Beam.Schema.Tables.Columnar
+                  f Data.UUID.Types.Internal.UUID)
+207352dddc77c697348836ee95993208
+  axiom Database.MasterEntity.Rep_AppEntity::
+    [(table :: (* -> *) -> *), (f :: * -> *)]
+      GHC.Generics.Rep (Database.MasterEntity.AppEntity table f)
+        = GHC.Generics.D1
+            ('GHC.Generics.MetaData
+               "AppEntity"
+               "Database.MasterEntity"
+               "api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG"
+               'GHC.Types.False)
+            (GHC.Generics.C1
+               ('GHC.Generics.MetaCons
+                  "AppEntity" 'GHC.Generics.PrefixI 'GHC.Types.True)
+               ((GHC.Generics.S1
+                   ('GHC.Generics.MetaSel
+                      ('GHC.Base.Just "_appId")
+                      'GHC.Generics.NoSourceUnpackedness
+                      'GHC.Generics.NoSourceStrictness
+                      'GHC.Generics.DecidedLazy)
+                   (GHC.Generics.Rec0
+                      (Database.Beam.Schema.Tables.C f Data.UUID.Types.Internal.UUID))
+                 GHC.Generics.:*: GHC.Generics.S1
+                                    ('GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "_baseTable")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy)
+                                    (GHC.Generics.Rec0 (table f)))
+                GHC.Generics.:*: (GHC.Generics.S1
+                                    ('GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "_created_at")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy)
+                                    (GHC.Generics.Rec0
+                                       (Database.Beam.Schema.Tables.C
+                                          f Data.Time.Clock.Internal.UTCTime.UTCTime))
+                                  GHC.Generics.:*: GHC.Generics.S1
+                                                     ('GHC.Generics.MetaSel
+                                                        ('GHC.Base.Just "_updated_at")
+                                                        'GHC.Generics.NoSourceUnpackedness
+                                                        'GHC.Generics.NoSourceStrictness
+                                                        'GHC.Generics.DecidedLazy)
+                                                     (GHC.Generics.Rec0
+                                                        (Database.Beam.Schema.Tables.C
+                                                           f
+                                                           Data.Time.Clock.Internal.UTCTime.UTCTime)))))
+207352dddc77c697348836ee95993208
+  axiom Database.MasterEntity.Rep_R:PrimaryKeyAppEntityf::
+    [(table :: (* -> *) -> *), (f :: * -> *)]
+      GHC.Generics.Rep
+        (Database.Beam.Schema.Tables.PrimaryKey
+           (Database.MasterEntity.AppEntity table) f)
+        = GHC.Generics.D1
+            ('GHC.Generics.MetaData
+               "PrimaryKey"
+               "Database.MasterEntity"
+               "api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG"
+               'GHC.Types.False)
+            (GHC.Generics.C1
+               ('GHC.Generics.MetaCons
+                  "MyAppKey" 'GHC.Generics.PrefixI 'GHC.Types.False)
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     'GHC.Base.Nothing
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0
+                     (Database.Beam.Schema.Tables.Columnar
+                        f Data.UUID.Types.Internal.UUID))))
+44ec75dda5379330d4f7238395a9ec50
+  appId ::
+    Control.Lens.Type.Lens'
+      (Database.MasterEntity.AppEntity table f)
+      (Database.Beam.Schema.Tables.C f Data.UUID.Types.Internal.UUID)
+a296dec9f6eca6b15d567cc686449c7e
+  baseTable ::
+    Control.Lens.Type.Lens
+      (Database.MasterEntity.AppEntity table1 f)
+      (Database.MasterEntity.AppEntity table2 f)
+      (table1 f)
+      (table2 f)
+6fa7a3fa4c8f937f700675adf0c2c023
+  created_at ::
+    Control.Lens.Type.Lens'
+      (Database.MasterEntity.AppEntity table f)
+      (Database.Beam.Schema.Tables.C
+         f Data.Time.Clock.Internal.UTCTime.UTCTime)
+10cdff6ed7aa44df02ec76f18b0cf6f3
+  dropLensUnderOption :: Data.Aeson.Types.Internal.Options
+d65b333ccb77af57e1337d81359a38cb
+  updated_at ::
+    Control.Lens.Type.Lens'
+      (Database.MasterEntity.AppEntity table f)
+      (Database.Beam.Schema.Tables.C
+         f Data.Time.Clock.Internal.UTCTime.UTCTime)
+instance Database.Beam.Schema.Tables.Beamable [Database.MasterEntity.AppEntity]
+  = Database.MasterEntity.$fBeamableAppEntity
+instance Database.Beam.Schema.Tables.Beamable [Database.Beam.Schema.Tables.PrimaryKey]
+  = Database.MasterEntity.$fBeamablePrimaryKey
+instance GHC.Generics.Generic [Database.MasterEntity.AppEntity]
+  = Database.MasterEntity.$fGenericAppEntity
+instance GHC.Generics.Generic [Database.Beam.Schema.Tables.PrimaryKey]
+  = Database.MasterEntity.$fGenericPrimaryKey
+instance Database.Beam.Schema.Tables.Table [Database.MasterEntity.AppEntity]
+  = Database.MasterEntity.$fTableAppEntity
+instance Data.Aeson.Types.ToJSON.ToJSON [Database.MasterEntity.AppEntity]
+  = Database.MasterEntity.$fToJSONAppEntity
+family instance Database.Beam.Schema.Tables.PrimaryKey [Database.MasterEntity.AppEntity]
+  = Database.MasterEntity.D:R:PrimaryKeyAppEntityf0
+family instance GHC.Generics.Rep [Database.Beam.Schema.Tables.PrimaryKey]
+  = Database.MasterEntity.Rep_R:PrimaryKeyAppEntityf
+family instance GHC.Generics.Rep [Database.MasterEntity.AppEntity]
+  = Database.MasterEntity.Rep_AppEntity
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

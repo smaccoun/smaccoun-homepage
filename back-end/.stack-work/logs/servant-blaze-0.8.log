@@ -1,0 +1,12 @@
+Configuring servant-blaze-0.8...
+Preprocessing library for servant-blaze-0.8..
+Building library for servant-blaze-0.8..
+[1 of 1] Compiling Servant.HTML.Blaze ( src/Servant/HTML/Blaze.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Servant/HTML/Blaze.o )
+
+[;1msrc/Servant/HTML/Blaze.hs:20:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Html’ from module ‘Text.Blaze.Html’ is redundant[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m20 |[0m[0m [;1m[35mimport           Text.Blaze.Html               (Html, ToMarkup, toHtml)[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0mInstalling library in /Users/stevenmaccoun/projects/smaccoun-homepage/back-end/.stack-work/install/x86_64-osx/lts-11.2/8.2.2/lib/x86_64-osx-ghc-8.2.2/servant-blaze-0.8-hEEsn045EUKUuQC2jDNiP
+Registering library for servant-blaze-0.8..

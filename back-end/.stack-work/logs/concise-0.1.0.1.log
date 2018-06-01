@@ -1,0 +1,6 @@
+Configuring concise-0.1.0.1...
+Preprocessing library for concise-0.1.0.1..
+Building library for concise-0.1.0.1..
+[1 of 1] Compiling Control.Lens.Cons.Extras ( src/Control/Lens/Cons/Extras.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Control/Lens/Cons/Extras.o )
+Installing library in /Users/stevenmaccoun/projects/smaccoun-homepage/back-end/.stack-work/install/x86_64-osx/lts-11.2/8.2.2/lib/x86_64-osx-ghc-8.2.2/concise-0.1.0.1-7wBSf9nu8GEb6CFz58DgJ
+Registering library for concise-0.1.0.1..

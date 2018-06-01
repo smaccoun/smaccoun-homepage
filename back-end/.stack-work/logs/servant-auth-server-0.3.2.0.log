@@ -1,0 +1,22 @@
+Configuring servant-auth-server-0.3.2.0...
+Preprocessing library for servant-auth-server-0.3.2.0..
+Building library for servant-auth-server-0.3.2.0..
+[ 1 of 12] Compiling Servant.Auth.Server.Internal.AddSetCookie ( src/Servant/Auth/Server/Internal/AddSetCookie.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Servant/Auth/Server/Internal/AddSetCookie.o )
+[ 2 of 12] Compiling Servant.Auth.Server.Internal.ConfigTypes ( src/Servant/Auth/Server/Internal/ConfigTypes.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Servant/Auth/Server/Internal/ConfigTypes.o )
+[ 3 of 12] Compiling Servant.Auth.Server.Internal.FormLogin ( src/Servant/Auth/Server/Internal/FormLogin.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Servant/Auth/Server/Internal/FormLogin.o )
+[ 4 of 12] Compiling Servant.Auth.Server.Internal.ThrowAll ( src/Servant/Auth/Server/Internal/ThrowAll.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Servant/Auth/Server/Internal/ThrowAll.o )
+[ 5 of 12] Compiling Servant.Auth.Server.Internal.Types ( src/Servant/Auth/Server/Internal/Types.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Servant/Auth/Server/Internal/Types.o )
+[ 6 of 12] Compiling Servant.Auth.Server.Internal.JWT ( src/Servant/Auth/Server/Internal/JWT.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Servant/Auth/Server/Internal/JWT.o )
+[ 7 of 12] Compiling Servant.Auth.Server.Internal.Cookie ( src/Servant/Auth/Server/Internal/Cookie.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Servant/Auth/Server/Internal/Cookie.o )
+[ 8 of 12] Compiling Servant.Auth.Server.Internal.BasicAuth ( src/Servant/Auth/Server/Internal/BasicAuth.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Servant/Auth/Server/Internal/BasicAuth.o )
+[ 9 of 12] Compiling Servant.Auth.Server.Internal.Class ( src/Servant/Auth/Server/Internal/Class.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Servant/Auth/Server/Internal/Class.o )
+[10 of 12] Compiling Servant.Auth.Server.Internal ( src/Servant/Auth/Server/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Servant/Auth/Server/Internal.o )
+[11 of 12] Compiling Servant.Auth.Server.SetCookieOrphan ( src/Servant/Auth/Server/SetCookieOrphan.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Servant/Auth/Server/SetCookieOrphan.o )
+[12 of 12] Compiling Servant.Auth.Server ( src/Servant/Auth/Server.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Servant/Auth/Server.o )
+Preprocessing executable 'readme' for servant-auth-server-0.3.2.0..
+Building executable 'readme' for servant-auth-server-0.3.2.0..
+[1 of 1] Compiling Main             ( executables/README.lhs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/readme/readme-tmp/Main.o )
+Linking .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/readme/readme ...
+Installing library in /Users/stevenmaccoun/projects/smaccoun-homepage/back-end/.stack-work/install/x86_64-osx/lts-11.2/8.2.2/lib/x86_64-osx-ghc-8.2.2/servant-auth-server-0.3.2.0-FJWcOJceLvCKpKTYajvc3W
+Installing executable readme in /Users/stevenmaccoun/projects/smaccoun-homepage/back-end/.stack-work/install/x86_64-osx/lts-11.2/8.2.2/bin
+Registering library for servant-auth-server-0.3.2.0..

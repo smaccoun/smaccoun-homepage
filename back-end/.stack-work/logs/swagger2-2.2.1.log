@@ -1,0 +1,23 @@
+[1 of 2] Compiling Main             ( /private/var/folders/3r/81ksrd9s4m326x1v1qtxr70c0000gn/T/stack53490/swagger2-2.2.1/Setup.hs, /private/var/folders/3r/81ksrd9s4m326x1v1qtxr70c0000gn/T/stack53490/swagger2-2.2.1/.stack-work/dist/x86_64-osx/Cabal-2.0.1.0/setup/Main.o )
+[2 of 2] Compiling StackSetupShim   ( /Users/stevenmaccoun/.stack/setup-exe-src/setup-shim-mPHDZzAJ.hs, /private/var/folders/3r/81ksrd9s4m326x1v1qtxr70c0000gn/T/stack53490/swagger2-2.2.1/.stack-work/dist/x86_64-osx/Cabal-2.0.1.0/setup/StackSetupShim.o )
+Linking /private/var/folders/3r/81ksrd9s4m326x1v1qtxr70c0000gn/T/stack53490/swagger2-2.2.1/.stack-work/dist/x86_64-osx/Cabal-2.0.1.0/setup/setup ...
+Configuring swagger2-2.2.1...
+Preprocessing library for swagger2-2.2.1..
+Building library for swagger2-2.2.1..
+[ 1 of 15] Compiling Data.Swagger.Declare ( src/Data/Swagger/Declare.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Data/Swagger/Declare.o )
+[ 2 of 15] Compiling Data.Swagger.Internal.AesonUtils ( src/Data/Swagger/Internal/AesonUtils.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Data/Swagger/Internal/AesonUtils.o )
+[ 3 of 15] Compiling Data.Swagger.Internal.TypeShape ( src/Data/Swagger/Internal/TypeShape.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Data/Swagger/Internal/TypeShape.o )
+[ 4 of 15] Compiling Data.Swagger.Internal.Utils ( src/Data/Swagger/Internal/Utils.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Data/Swagger/Internal/Utils.o )
+[ 5 of 15] Compiling Data.Swagger.Internal ( src/Data/Swagger/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Data/Swagger/Internal.o )
+[ 6 of 15] Compiling Data.Swagger.Lens ( src/Data/Swagger/Lens.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Data/Swagger/Lens.o )
+[ 7 of 15] Compiling Data.Swagger.SchemaOptions ( src/Data/Swagger/SchemaOptions.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Data/Swagger/SchemaOptions.o )
+[ 8 of 15] Compiling Data.Swagger.Internal.ParamSchema ( src/Data/Swagger/Internal/ParamSchema.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Data/Swagger/Internal/ParamSchema.o )
+[ 9 of 15] Compiling Data.Swagger.ParamSchema ( src/Data/Swagger/ParamSchema.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Data/Swagger/ParamSchema.o )
+[10 of 15] Compiling Data.Swagger.Internal.Schema ( src/Data/Swagger/Internal/Schema.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Data/Swagger/Internal/Schema.o )
+[11 of 15] Compiling Data.Swagger.Schema ( src/Data/Swagger/Schema.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Data/Swagger/Schema.o )
+[12 of 15] Compiling Data.Swagger.Operation ( src/Data/Swagger/Operation.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Data/Swagger/Operation.o )
+[13 of 15] Compiling Data.Swagger.Internal.Schema.Validation ( src/Data/Swagger/Internal/Schema/Validation.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Data/Swagger/Internal/Schema/Validation.o )
+[14 of 15] Compiling Data.Swagger.Schema.Validation ( src/Data/Swagger/Schema/Validation.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Data/Swagger/Schema/Validation.o )
+[15 of 15] Compiling Data.Swagger     ( src/Data/Swagger.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Data/Swagger.o )
+Installing library in /Users/stevenmaccoun/projects/smaccoun-homepage/back-end/.stack-work/install/x86_64-osx/lts-11.2/8.2.2/lib/x86_64-osx-ghc-8.2.2/swagger2-2.2.1-H9BhX2mC1E0F1qfcanIpcO
+Registering library for swagger2-2.2.1..

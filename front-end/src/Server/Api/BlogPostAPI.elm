@@ -1,49 +1,47 @@
 module Server.Api.BlogPostAPI exposing (..)
 
+import Json.Decode
 import Server.Config exposing (Context, Endpoint(..), apiUrl)
-import Server.RequestUtils exposing (BaseRequestParams(..), getRequest, postRequest)
+import Server.RequestUtils exposing (BaseRequestParams, getRequest, postRequest)
 import Server.ResourceAPI exposing (RemoteCmd, createItem, getContainer, getItem, updateItem)
-import Types.BlogPost exposing (BlogPost, BlogPostNew, blogPostDecoder, blogPostEncoder, blogPostNewDecoder)
+import Types.BlogPost exposing (BlogPost, blogPostDecoder, blogPostEncoder)
+import Types.MasterEntity exposing (MasterEntity, entityDecoder)
 import Types.Pagination exposing (PaginatedResult)
-
-
-blogPostEndpoint : Endpoint
-blogPostEndpoint =
-    Endpoint "blogPost"
-
 
 
 {- SERVER -}
 
 
-baseRequestParams : Context -> BaseRequestParams BlogPost
+blogPostEndpoint : String
+blogPostEndpoint =
+    "blogPost"
+
+
+baseRequestParams : Context -> Json.Decode.Decoder a -> BaseRequestParams a
 baseRequestParams context =
-    BaseRequestParams context blogPostEndpoint blogPostDecoder
+    BaseRequestParams context "blogPost"
 
 
-submitPost : Context -> BlogPostNew -> RemoteCmd BlogPostNew
+submitPost : Context -> BlogPost -> RemoteCmd (MasterEntity BlogPost)
 submitPost context post =
-    let
-        params =
-            BaseRequestParams context blogPostEndpoint blogPostNewDecoder
-    in
-    createItem params (blogPostEncoder post)
+    createItem (baseRequestParams context blogPostDecoder) (blogPostEncoder post)
 
 
-editPost : Context -> BlogPostNew -> String -> RemoteCmd BlogPostNew
+editPost : Context -> BlogPost -> String -> RemoteCmd (List String)
 editPost context post uuid =
-    let
-        params =
-            BaseRequestParams context blogPostEndpoint blogPostNewDecoder
-    in
-    updateItem params (blogPostEncoder post) uuid
+    updateItem context (Endpoint blogPostEndpoint) (blogPostEncoder post) uuid
 
 
-getBlogPosts : Context -> RemoteCmd (PaginatedResult BlogPost)
+getRequestParams : Context -> BaseRequestParams (MasterEntity BlogPost)
+getRequestParams context =
+    baseRequestParams context (entityDecoder blogPostDecoder)
+
+
+getBlogPosts : Context -> RemoteCmd (PaginatedResult (MasterEntity BlogPost))
 getBlogPosts context =
-    getContainer (baseRequestParams context)
+    getContainer (getRequestParams context)
 
 
-getBlogPost : Context -> String -> RemoteCmd BlogPost
+getBlogPost : Context -> String -> RemoteCmd (MasterEntity BlogPost)
 getBlogPost context uuid =
-    getItem (baseRequestParams context) uuid
+    getItem (getRequestParams context) uuid

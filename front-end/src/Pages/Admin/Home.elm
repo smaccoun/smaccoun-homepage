@@ -65,17 +65,17 @@ viewRemoteUsers : WebData (PaginatedResult User) -> Html msg
 viewRemoteUsers remoteUsers =
     case remoteUsers of
         Success users ->
-            div [] [ viewUsers users ]
+            div [] [ viewUsers users.data ]
 
         _ ->
             div [] [ text "..." ]
 
 
-viewUsers : PaginatedResult User -> Html msg
+viewUsers : List User -> Html msg
 viewUsers users =
     div [] <|
         h1 [] [ text "Users" ]
-            :: (users.data |> List.map viewUserRow)
+            :: List.map viewUserRow users
 
 
 viewUserRow : User -> Html msg

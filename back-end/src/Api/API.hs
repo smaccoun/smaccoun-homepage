@@ -10,40 +10,35 @@
 
 module Api.API where
 
-import           Api.Endpoints.BlogPost
 import           Api.Endpoints.Login
 import           Api.Endpoints.User
-import           App
 import           AppPrelude
-import           Data.Swagger                        (Swagger, ToSchema)
-import           Data.Swagger.Internal.ParamSchema
+import           Config.AppConfig
 import           Data.Text                           (Text)
-import           Database.Tables.BlogPost            (BlogPost, BlogPostEntity)
-import           Models.Credentials                  (Email, Password)
-import           Models.Login
+import           Database.Crud
+import           Database.Schema
+import           Database.Tables.BlogPost
 import           Models.User                         (UserResponse (..))
-import           Pagination
 import           Servant
 import           Servant.Auth.Server
 import           Servant.Auth.Server.SetCookieOrphan ()
-import           Servant.Swagger
 
 ---------------------------------------------------------------
 type Protected
    =    UserAPI
-   :<|> BlogPostMutateAPI
+   :<|> CUDEntityAPI "blogPost" BlogPostEntity BlogPost
 
 protected :: AuthResult UserResponse -> ServerT Protected AppM
 protected (Authenticated user) =
        userServer user
-  :<|> blogPostMutateServer user
+  :<|> cudEntityServer blogPostTable
 
-protected _ = throwAll err401
+protected _                    = throwAll err401
 
 type Unprotected =
        "health" :> Get '[JSON] Text
   :<|> LoginAPI
-  :<|> BlogPostViewAPI
+  :<|> REntityAPI "blogPost" BlogPostEntity
 
 unprotectedProxy :: Proxy Unprotected
 unprotectedProxy = Proxy
@@ -52,7 +47,7 @@ unprotected :: JWTSettings -> ServerT Unprotected AppM
 unprotected jwts =
        return "Okay"
   :<|> loginServer jwts
-  :<|> blogPostViewServer
+  :<|> rEntityServer blogPostTable
 
 type API auths =
        (Auth auths UserResponse :> Protected)
@@ -63,25 +58,5 @@ api = Proxy
 
 
 serverAPI :: JWTSettings -> ServerT (API auths) AppM
-serverAPI jwts =
-       protected
-  :<|> unprotected jwts
+serverAPI jwts = protected :<|> unprotected jwts
 
-
--- SWAGGER
-
-swaggerUnprotected :: Swagger
-swaggerUnprotected = toSwagger unprotectedProxy
-
-instance ToSchema PaginationContext
-instance (ToSchema a) => ToSchema (PaginatedResult a)
-instance ToParamSchema Limit
-instance ToParamSchema Offset
-instance ToParamSchema Order
-
-instance ToSchema Login
-instance ToSchema Email
-instance ToSchema LoginResponse
-instance ToSchema Password
-instance ToSchema BlogPostEntity
-instance ToSchema BlogPost

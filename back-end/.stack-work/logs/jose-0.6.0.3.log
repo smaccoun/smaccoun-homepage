@@ -1,0 +1,611 @@
+Configuring jose-0.6.0.3...
+Preprocessing library for jose-0.6.0.3..
+Building library for jose-0.6.0.3..
+[ 1 of 18] Compiling Crypto.JOSE.AESKW ( src/Crypto/JOSE/AESKW.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE/AESKW.o )
+[ 2 of 18] Compiling Crypto.JOSE.Error ( src/Crypto/JOSE/Error.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE/Error.o )
+[ 3 of 18] Compiling Crypto.JOSE.Compact ( src/Crypto/JOSE/Compact.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE/Compact.o )
+[ 4 of 18] Compiling Crypto.JOSE.TH   ( src/Crypto/JOSE/TH.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE/TH.o )
+[ 5 of 18] Compiling Crypto.JOSE.JWA.JWS ( src/Crypto/JOSE/JWA/JWS.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE/JWA/JWS.o )
+[ 6 of 18] Compiling Crypto.JOSE.JWA.JWE.Alg ( src/Crypto/JOSE/JWA/JWE/Alg.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE/JWA/JWE/Alg.o )
+[ 7 of 18] Compiling Crypto.JOSE.Types.Internal ( src/Crypto/JOSE/Types/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE/Types/Internal.o )
+[ 8 of 18] Compiling Crypto.JOSE.Types.Orphans ( src/Crypto/JOSE/Types/Orphans.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE/Types/Orphans.o )
+
+[;1msrc/Crypto/JOSE/Types/Orphans.hs:20:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Data.List.NonEmpty’ is redundant
+      except perhaps to import instances from ‘Data.List.NonEmpty’
+    To import instances alone, use: import Data.List.NonEmpty()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m20 |[0m[0m [;1m[35mimport Data.List.NonEmpty (NonEmpty(..))[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/Types/Orphans.hs:23:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Test.QuickCheck’ is redundant
+      except perhaps to import instances from ‘Test.QuickCheck’
+    To import instances alone, use: import Test.QuickCheck()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m23 |[0m[0m [;1m[35mimport Test.QuickCheck[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[ 9 of 18] Compiling Crypto.JOSE.Types ( src/Crypto/JOSE/Types.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE/Types.o )
+[10 of 18] Compiling Crypto.JOSE.JWA.JWK ( src/Crypto/JOSE/JWA/JWK.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE/JWA/JWK.o )
+[11 of 18] Compiling Crypto.JOSE.JWK  ( src/Crypto/JOSE/JWK.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE/JWK.o )
+[12 of 18] Compiling Crypto.JOSE.JWA.JWE ( src/Crypto/JOSE/JWA/JWE.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE/JWA/JWE.o )
+[13 of 18] Compiling Crypto.JOSE.Header ( src/Crypto/JOSE/Header.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE/Header.o )
+[14 of 18] Compiling Crypto.JOSE.JWK.Store ( src/Crypto/JOSE/JWK/Store.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE/JWK/Store.o )
+[15 of 18] Compiling Crypto.JOSE.JWS  ( src/Crypto/JOSE/JWS.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE/JWS.o )
+
+[;1msrc/Crypto/JOSE/JWS.hs:569:7: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘HasAlgorithms a’ matches an instance declaration
+      instance HasValidationSettings a => HasAlgorithms a
+        -- Defined at src/Crypto/JOSE/JWS.hs:522:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the type signature:
+        verifyJWS :: (HasAlgorithms a,
+                      HasValidationPolicy a,
+                      AsError e,
+                      MonadError e m,
+                      HasJWSHeader h,
+                      HasParams h,
+                      JWKStore k,
+                      Cons s s Word8 Word8,
+                      AsEmpty s,
+                      Foldable t,
+                      ProtectionIndicator p) =>
+                     a -> k -> JWS t p h -> m s[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m569 |[0m[0m   ::  [;1m[35m( HasAlgorithms a, HasValidationPolicy a, AsError e, MonadError e m[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWS.hs:569:7: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘HasValidationPolicy a’
+        matches an instance declaration
+      instance HasValidationSettings a => HasValidationPolicy a
+        -- Defined at src/Crypto/JOSE/JWS.hs:524:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the type signature:
+        verifyJWS :: (HasAlgorithms a,
+                      HasValidationPolicy a,
+                      AsError e,
+                      MonadError e m,
+                      HasJWSHeader h,
+                      HasParams h,
+                      JWKStore k,
+                      Cons s s Word8 Word8,
+                      AsEmpty s,
+                      Foldable t,
+                      ProtectionIndicator p) =>
+                     a -> k -> JWS t p h -> m s[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m569 |[0m[0m   ::  [;1m[35m( HasAlgorithms a, HasValidationPolicy a, AsError e, MonadError e m[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m[16 of 18] Compiling Crypto.JOSE      ( src/Crypto/JOSE.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE.o )
+[17 of 18] Compiling Crypto.JOSE.JWE  ( src/Crypto/JOSE/JWE.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JOSE/JWE.o )
+
+[;1msrc/Crypto/JOSE/JWE.hs:86:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-top-binds[0m[0m[;1m][0m[0m[;1m
+    Defined but not used: ‘newJWEHeader’[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m86 |[0m[0m [;1m[35mnewJWEHeader[0m[0m alg enc =
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:86:14: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘alg’ shadows the existing binding
+      imported from ‘Crypto.JOSE.Header’ at src/Crypto/JOSE/JWE.hs:52:1-25
+      (and originally defined at src/Crypto/JOSE/Header.hs:313:3-48)[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m86 |[0m[0m newJWEHeader [;1m[35malg[0m[0m enc =
+[;1m[34m   |[0m[0m[;1m[35m              ^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:107:21: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘alg’ shadows the existing binding
+      imported from ‘Crypto.JOSE.Header’ at src/Crypto/JOSE/JWE.hs:52:1-25
+      (and originally defined at src/Crypto/JOSE/Header.hs:313:3-48)[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m107 |[0m[0m   params (JWEHeader [;1m[35malg[0m[0m enc zip' jku jwk kid x5u x5c x5t x5tS256 typ cty crit) =
+[;1m[34m    |[0m[0m[;1m[35m                     ^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:107:21: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-matches[0m[0m[;1m][0m[0m[;1m
+    Defined but not used: ‘alg’[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m107 |[0m[0m   params (JWEHeader [;1m[35malg[0m[0m enc zip' jku jwk kid x5u x5c x5t x5tS256 typ cty crit) =
+[;1m[34m    |[0m[0m[;1m[35m                     ^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:107:34: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘jku’ shadows the existing binding
+      imported from ‘Crypto.JOSE.Header’ at src/Crypto/JOSE/JWE.hs:52:1-25
+      (and originally defined at src/Crypto/JOSE/Header.hs:316:3-54)[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m107 |[0m[0m   params (JWEHeader alg enc zip' [;1m[35mjku[0m[0m jwk kid x5u x5c x5t x5tS256 typ cty crit) =
+[;1m[34m    |[0m[0m[;1m[35m                                  ^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:107:38: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘jwk’ shadows the existing binding
+      imported from ‘Crypto.JOSE.Header’ at src/Crypto/JOSE/JWE.hs:52:1-25
+      (and originally defined at src/Crypto/JOSE/Header.hs:319:3-48)[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m107 |[0m[0m   params (JWEHeader alg enc zip' jku [;1m[35mjwk[0m[0m kid x5u x5c x5t x5tS256 typ cty crit) =
+[;1m[34m    |[0m[0m[;1m[35m                                      ^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:107:42: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘kid’ shadows the existing binding
+      imported from ‘Crypto.JOSE.Header’ at src/Crypto/JOSE/JWE.hs:52:1-25
+      (and originally defined at src/Crypto/JOSE/Header.hs:322:3-51)[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m107 |[0m[0m   params (JWEHeader alg enc zip' jku jwk [;1m[35mkid[0m[0m x5u x5c x5t x5tS256 typ cty crit) =
+[;1m[34m    |[0m[0m[;1m[35m                                          ^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:107:46: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘x5u’ shadows the existing binding
+      imported from ‘Crypto.JOSE.Header’ at src/Crypto/JOSE/JWE.hs:52:1-25
+      (and originally defined at src/Crypto/JOSE/Header.hs:325:3-54)[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m107 |[0m[0m   params (JWEHeader alg enc zip' jku jwk kid [;1m[35mx5u[0m[0m x5c x5t x5tS256 typ cty crit) =
+[;1m[34m    |[0m[0m[;1m[35m                                              ^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:107:50: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘x5c’ shadows the existing binding
+      imported from ‘Crypto.JOSE.Header’ at src/Crypto/JOSE/JWE.hs:52:1-25
+      (and originally defined at src/Crypto/JOSE/Header.hs:328:3-72)[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m107 |[0m[0m   params (JWEHeader alg enc zip' jku jwk kid x5u [;1m[35mx5c[0m[0m x5t x5tS256 typ cty crit) =
+[;1m[34m    |[0m[0m[;1m[35m                                                  ^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:107:54: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘x5t’ shadows the existing binding
+      imported from ‘Crypto.JOSE.Header’ at src/Crypto/JOSE/JWE.hs:52:1-25
+      (and originally defined at src/Crypto/JOSE/Header.hs:331:3-61)[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m107 |[0m[0m   params (JWEHeader alg enc zip' jku jwk kid x5u x5c [;1m[35mx5t[0m[0m x5tS256 typ cty crit) =
+[;1m[34m    |[0m[0m[;1m[35m                                                      ^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:107:58: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘x5tS256’ shadows the existing binding
+      imported from ‘Crypto.JOSE.Header’ at src/Crypto/JOSE/JWE.hs:52:1-25
+      (and originally defined at src/Crypto/JOSE/Header.hs:334:3-67)[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m107 |[0m[0m   params (JWEHeader alg enc zip' jku jwk kid x5u x5c x5t [;1m[35mx5tS256[0m[0m typ cty crit) =
+[;1m[34m    |[0m[0m[;1m[35m                                                          ^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:107:66: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘typ’ shadows the existing binding
+      imported from ‘Crypto.JOSE.Header’ at src/Crypto/JOSE/JWE.hs:52:1-25
+      (and originally defined at src/Crypto/JOSE/Header.hs:337:3-51)[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m107 |[0m[0m   params (JWEHeader alg enc zip' jku jwk kid x5u x5c x5t x5tS256 [;1m[35mtyp[0m[0m cty crit) =
+[;1m[34m    |[0m[0m[;1m[35m                                                                  ^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:107:70: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘cty’ shadows the existing binding
+      imported from ‘Crypto.JOSE.Header’ at src/Crypto/JOSE/JWE.hs:52:1-25
+      (and originally defined at src/Crypto/JOSE/Header.hs:340:3-51)[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m107 |[0m[0m   params (JWEHeader alg enc zip' jku jwk kid x5u x5c x5t x5tS256 typ [;1m[35mcty[0m[0m crit) =
+[;1m[34m    |[0m[0m[;1m[35m                                                                      ^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:107:74: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘crit’ shadows the existing binding
+      imported from ‘Crypto.JOSE.Header’ at src/Crypto/JOSE/JWE.hs:52:1-25
+      (and originally defined at src/Crypto/JOSE/Header.hs:343:3-47)[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m107 |[0m[0m   params (JWEHeader alg enc zip' jku jwk kid x5u x5c x5t x5tS256 typ cty [;1m[35mcrit[0m[0m) =
+[;1m[34m    |[0m[0m[;1m[35m                                                                          ^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:182:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-top-binds[0m[0m[;1m][0m[0m[;1m
+    Defined but not used: ‘wrap’[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m182 |[0m[0m [;1m[35mwrap[0m[0m alg@RSA_OAEP (RSAKeyMaterial k) m = bimap RSAError (alg,) <$>
+[;1m[34m    |[0m[0m[;1m[35m ^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:182:6: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘alg’ shadows the existing binding
+      imported from ‘Crypto.JOSE.Header’ at src/Crypto/JOSE/JWE.hs:52:1-25
+      (and originally defined at src/Crypto/JOSE/Header.hs:313:3-48)[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m182 |[0m[0m wrap [;1m[35malg[0m[0m@RSA_OAEP (RSAKeyMaterial k) m = bimap RSAError (alg,) <$>
+[;1m[34m    |[0m[0m[;1m[35m      ^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:185:6: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘alg’ shadows the existing binding
+      imported from ‘Crypto.JOSE.Header’ at src/Crypto/JOSE/JWE.hs:52:1-25
+      (and originally defined at src/Crypto/JOSE/Header.hs:313:3-48)[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m185 |[0m[0m wrap [;1m[35malg[0m[0m@RSA_OAEP_256 (RSAKeyMaterial k) m = bimap RSAError (alg,) <$>
+[;1m[34m    |[0m[0m[;1m[35m      ^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:204:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-top-binds[0m[0m[;1m][0m[0m[;1m
+    Defined but not used: ‘wrapAESKW’[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m204 |[0m[0m [;1m[35mwrapAESKW[0m[0m cipher m = case cipher of
+[;1m[34m    |[0m[0m[;1m[35m ^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:215:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-top-binds[0m[0m[;1m][0m[0m[;1m
+    Defined but not used: ‘wrapAESGCM’[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m215 |[0m[0m [;1m[35mwrapAESGCM[0m[0m f enc (OctKeyMaterial (OctKeyParameters (Types.Base64Octets k))) m =
+[;1m[34m    |[0m[0m[;1m[35m ^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JOSE/JWE.hs:227:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-top-binds[0m[0m[;1m][0m[0m[;1m
+    Defined but not used: ‘encrypt’[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m227 |[0m[0m [;1m[35mencrypt[0m[0m A128CBC_HS256 k m a = case B.length k of
+[;1m[34m    |[0m[0m[;1m[35m ^^^^^^^[0m[0m
+[0m[0m[0m[18 of 18] Compiling Crypto.JWT       ( src/Crypto/JWT.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Crypto/JWT.o )
+
+[;1msrc/Crypto/JWT.hs:412:5: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘HasAllowedSkew a’ matches an instance declaration
+      instance HasJWTValidationSettings a => HasAllowedSkew a
+        -- Defined at src/Crypto/JWT.hs:374:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the type signature:
+        validateClaimsSet :: (MonadTime m,
+                              HasAllowedSkew a,
+                              HasAudiencePredicate a,
+                              HasIssuerPredicate a,
+                              HasCheckIssuedAt a,
+                              AsJWTError e,
+                              MonadError e m) =>
+                             a -> ClaimsSet -> m ClaimsSet[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m412 |[0m[0m     [;1m[35m( MonadTime m, HasAllowedSkew a, HasAudiencePredicate a[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JWT.hs:412:5: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘HasAudiencePredicate a’
+        matches an instance declaration
+      instance HasJWTValidationSettings a => HasAudiencePredicate a
+        -- Defined at src/Crypto/JWT.hs:376:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the type signature:
+        validateClaimsSet :: (MonadTime m,
+                              HasAllowedSkew a,
+                              HasAudiencePredicate a,
+                              HasIssuerPredicate a,
+                              HasCheckIssuedAt a,
+                              AsJWTError e,
+                              MonadError e m) =>
+                             a -> ClaimsSet -> m ClaimsSet[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m412 |[0m[0m     [;1m[35m( MonadTime m, HasAllowedSkew a, HasAudiencePredicate a[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JWT.hs:412:5: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘HasIssuerPredicate a’
+        matches an instance declaration
+      instance HasJWTValidationSettings a => HasIssuerPredicate a
+        -- Defined at src/Crypto/JWT.hs:378:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the type signature:
+        validateClaimsSet :: (MonadTime m,
+                              HasAllowedSkew a,
+                              HasAudiencePredicate a,
+                              HasIssuerPredicate a,
+                              HasCheckIssuedAt a,
+                              AsJWTError e,
+                              MonadError e m) =>
+                             a -> ClaimsSet -> m ClaimsSet[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m412 |[0m[0m     [;1m[35m( MonadTime m, HasAllowedSkew a, HasAudiencePredicate a[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JWT.hs:412:5: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘HasCheckIssuedAt a’
+        matches an instance declaration
+      instance HasJWTValidationSettings a => HasCheckIssuedAt a
+        -- Defined at src/Crypto/JWT.hs:380:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the type signature:
+        validateClaimsSet :: (MonadTime m,
+                              HasAllowedSkew a,
+                              HasAudiencePredicate a,
+                              HasIssuerPredicate a,
+                              HasCheckIssuedAt a,
+                              AsJWTError e,
+                              MonadError e m) =>
+                             a -> ClaimsSet -> m ClaimsSet[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m412 |[0m[0m     [;1m[35m( MonadTime m, HasAllowedSkew a, HasAudiencePredicate a[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JWT.hs:431:6: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘HasAllowedSkew a’ matches an instance declaration
+      instance HasJWTValidationSettings a => HasAllowedSkew a
+        -- Defined at src/Crypto/JWT.hs:374:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the type signature:
+        validateExpClaim :: (MonadTime m,
+                             HasAllowedSkew a,
+                             AsJWTError e,
+                             MonadError e m) =>
+                            a -> ClaimsSet -> m ()[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m431 |[0m[0m   :: [;1m[35m(MonadTime m, HasAllowedSkew a, AsJWTError e, MonadError e m)[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JWT.hs:443:6: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘HasCheckIssuedAt a’
+        matches an instance declaration
+      instance HasJWTValidationSettings a => HasCheckIssuedAt a
+        -- Defined at src/Crypto/JWT.hs:380:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the type signature:
+        validateIatClaim :: (MonadTime m,
+                             HasCheckIssuedAt a,
+                             HasAllowedSkew a,
+                             AsJWTError e,
+                             MonadError e m) =>
+                            a -> ClaimsSet -> m ()[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m443 |[0m[0m   :: [;1m[35m(MonadTime m, HasCheckIssuedAt a, HasAllowedSkew a, AsJWTError e, MonadError e m)[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JWT.hs:443:6: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘HasAllowedSkew a’ matches an instance declaration
+      instance HasJWTValidationSettings a => HasAllowedSkew a
+        -- Defined at src/Crypto/JWT.hs:374:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the type signature:
+        validateIatClaim :: (MonadTime m,
+                             HasCheckIssuedAt a,
+                             HasAllowedSkew a,
+                             AsJWTError e,
+                             MonadError e m) =>
+                            a -> ClaimsSet -> m ()[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m443 |[0m[0m   :: [;1m[35m(MonadTime m, HasCheckIssuedAt a, HasAllowedSkew a, AsJWTError e, MonadError e m)[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JWT.hs:456:6: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘HasAllowedSkew a’ matches an instance declaration
+      instance HasJWTValidationSettings a => HasAllowedSkew a
+        -- Defined at src/Crypto/JWT.hs:374:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the type signature:
+        validateNbfClaim :: (MonadTime m,
+                             HasAllowedSkew a,
+                             AsJWTError e,
+                             MonadError e m) =>
+                            a -> ClaimsSet -> m ()[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m456 |[0m[0m   :: [;1m[35m(MonadTime m, HasAllowedSkew a, AsJWTError e, MonadError e m)[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JWT.hs:468:6: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘HasAudiencePredicate s’
+        matches an instance declaration
+      instance HasJWTValidationSettings a => HasAudiencePredicate a
+        -- Defined at src/Crypto/JWT.hs:376:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the type signature:
+        validateAudClaim :: (HasAudiencePredicate s,
+                             AsJWTError e,
+                             MonadError e m) =>
+                            s -> ClaimsSet -> m ()[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m468 |[0m[0m   :: [;1m[35m(HasAudiencePredicate s, AsJWTError e, MonadError e m)[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JWT.hs:479:6: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘HasIssuerPredicate s’
+        matches an instance declaration
+      instance HasJWTValidationSettings a => HasIssuerPredicate a
+        -- Defined at src/Crypto/JWT.hs:378:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the type signature:
+        validateIssClaim :: (HasIssuerPredicate s,
+                             AsJWTError e,
+                             MonadError e m) =>
+                            s -> ClaimsSet -> m ()[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m479 |[0m[0m   :: [;1m[35m(HasIssuerPredicate s, AsJWTError e, MonadError e m)[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JWT.hs:515:5: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘HasAllowedSkew a’ matches an instance declaration
+      instance HasJWTValidationSettings a => HasAllowedSkew a
+        -- Defined at src/Crypto/JWT.hs:374:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the type signature:
+        verifyClaims :: (MonadTime m,
+                         HasAllowedSkew a,
+                         HasAudiencePredicate a,
+                         HasIssuerPredicate a,
+                         HasCheckIssuedAt a,
+                         HasValidationSettings a,
+                         AsError e,
+                         AsJWTError e,
+                         MonadError e m,
+                         JWKStore k) =>
+                        a -> k -> SignedJWT -> m ClaimsSet[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m515 |[0m[0m     [;1m[35m( MonadTime m, HasAllowedSkew a, HasAudiencePredicate a[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JWT.hs:515:5: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘HasAudiencePredicate a’
+        matches an instance declaration
+      instance HasJWTValidationSettings a => HasAudiencePredicate a
+        -- Defined at src/Crypto/JWT.hs:376:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the type signature:
+        verifyClaims :: (MonadTime m,
+                         HasAllowedSkew a,
+                         HasAudiencePredicate a,
+                         HasIssuerPredicate a,
+                         HasCheckIssuedAt a,
+                         HasValidationSettings a,
+                         AsError e,
+                         AsJWTError e,
+                         MonadError e m,
+                         JWKStore k) =>
+                        a -> k -> SignedJWT -> m ClaimsSet[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m515 |[0m[0m     [;1m[35m( MonadTime m, HasAllowedSkew a, HasAudiencePredicate a[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JWT.hs:515:5: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘HasIssuerPredicate a’
+        matches an instance declaration
+      instance HasJWTValidationSettings a => HasIssuerPredicate a
+        -- Defined at src/Crypto/JWT.hs:378:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the type signature:
+        verifyClaims :: (MonadTime m,
+                         HasAllowedSkew a,
+                         HasAudiencePredicate a,
+                         HasIssuerPredicate a,
+                         HasCheckIssuedAt a,
+                         HasValidationSettings a,
+                         AsError e,
+                         AsJWTError e,
+                         MonadError e m,
+                         JWKStore k) =>
+                        a -> k -> SignedJWT -> m ClaimsSet[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m515 |[0m[0m     [;1m[35m( MonadTime m, HasAllowedSkew a, HasAudiencePredicate a[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1msrc/Crypto/JWT.hs:515:5: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘HasCheckIssuedAt a’
+        matches an instance declaration
+      instance HasJWTValidationSettings a => HasCheckIssuedAt a
+        -- Defined at src/Crypto/JWT.hs:380:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the type signature:
+        verifyClaims :: (MonadTime m,
+                         HasAllowedSkew a,
+                         HasAudiencePredicate a,
+                         HasIssuerPredicate a,
+                         HasCheckIssuedAt a,
+                         HasValidationSettings a,
+                         AsError e,
+                         AsJWTError e,
+                         MonadError e m,
+                         JWKStore k) =>
+                        a -> k -> SignedJWT -> m ClaimsSet[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m515 |[0m[0m     [;1m[35m( MonadTime m, HasAllowedSkew a, HasAudiencePredicate a[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0mPreprocessing executable 'example' for jose-0.6.0.3..
+Building executable 'example' for jose-0.6.0.3..
+[1 of 2] Compiling JWS              ( example/JWS.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/example/example-tmp/JWS.o )
+
+[;1mexample/JWS.hs:19:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wincomplete-patterns[0m[0m[;1m][0m[0m[;1m
+    Pattern match(es) are non-exhaustive
+    In an equation for ‘doJwsSign’:
+        Patterns not matched:
+            []
+            [_]
+            (_:_:_:_)[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m19 |[0m[0m [;1m[35mdoJwsSign [jwkFilename, payloadFilename] = do[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1mexample/JWS.hs:20:8: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘jwk’ shadows the existing binding
+      imported from ‘Crypto.JOSE.JWS’ at example/JWS.hs:9:1-22
+      (and originally defined in ‘Crypto.JOSE.Header’)[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m20 |[0m[0m   Just [;1m[35mjwk[0m[0m <- decode <$> L.readFile jwkFilename
+[;1m[34m   |[0m[0m[;1m[35m        ^^^[0m[0m
+[0m[0m[0m
+[;1mexample/JWS.hs:23:5: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘alg’ shadows the existing binding
+      imported from ‘Crypto.JOSE.JWS’ at example/JWS.hs:9:1-22
+      (and originally defined in ‘Crypto.JOSE.Header’)[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m23 |[0m[0m     [;1m[35malg[0m[0m <- bestJWSAlg jwk
+[;1m[34m   |[0m[0m[;1m[35m     ^^^[0m[0m
+[0m[0m[0m
+[;1mexample/JWS.hs:38:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wincomplete-patterns[0m[0m[;1m][0m[0m[;1m
+    Pattern match(es) are non-exhaustive
+    In an equation for ‘doJwsVerify’:
+        Patterns not matched:
+            []
+            [_]
+            (_:_:_:_)[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m38 |[0m[0m [;1m[35mdoJwsVerify [jwkFilename, jwsFilename] = do[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1mexample/JWS.hs:39:8: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘jwk’ shadows the existing binding
+      imported from ‘Crypto.JOSE.JWS’ at example/JWS.hs:9:1-22
+      (and originally defined in ‘Crypto.JOSE.Header’)[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m39 |[0m[0m   Just [;1m[35mjwk[0m[0m <- decode <$> L.readFile jwkFilename
+[;1m[34m   |[0m[0m[;1m[35m        ^^^[0m[0m
+[0m[0m[0m[2 of 2] Compiling Main             ( example/Main.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/example/example-tmp/Main.o )
+
+[;1mexample/Main.hs:35:5: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘param’ shadows the existing binding
+      imported from ‘Crypto.JWT’ at example/Main.hs:15:1-17
+      (and originally defined in ‘Crypto.JOSE.Header’)[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m35 |[0m[0m     [;1m[35mparam[0m[0m = case kty of
+[;1m[34m   |[0m[0m[;1m[35m     ^^^^^[0m[0m
+[0m[0m[0m
+[;1mexample/Main.hs:40:3: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘jwk’ shadows the existing binding
+      imported from ‘Crypto.JWT’ at example/Main.hs:15:1-17
+      (and originally defined in ‘Crypto.JOSE.Header’)[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m40 |[0m[0m   [;1m[35mjwk[0m[0m <- genJWK param
+[;1m[34m   |[0m[0m[;1m[35m   ^^^[0m[0m
+[0m[0m[0m
+[;1mexample/Main.hs:44:5: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘kid’ shadows the existing binding
+      imported from ‘Crypto.JWT’ at example/Main.hs:15:1-17
+      (and originally defined in ‘Crypto.JOSE.Header’)[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m44 |[0m[0m     [;1m[35mkid[0m[0m = view (re (base64url . digest) . utf8) h
+[;1m[34m   |[0m[0m[;1m[35m     ^^^[0m[0m
+[0m[0m[0m
+[;1mexample/Main.hs:60:8: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘jwk’ shadows the existing binding
+      imported from ‘Crypto.JWT’ at example/Main.hs:15:1-17
+      (and originally defined in ‘Crypto.JOSE.Header’)[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m60 |[0m[0m   Just [;1m[35mjwk[0m[0m <- decode <$> L.readFile jwkFilename
+[;1m[34m   |[0m[0m[;1m[35m        ^^^[0m[0m
+[0m[0m[0m
+[;1mexample/Main.hs:63:5: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘alg’ shadows the existing binding
+      imported from ‘Crypto.JWT’ at example/Main.hs:15:1-17
+      (and originally defined in ‘Crypto.JOSE.Header’)[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m63 |[0m[0m     [;1m[35malg[0m[0m <- bestJWSAlg jwk
+[;1m[34m   |[0m[0m[;1m[35m     ^^^[0m[0m
+[0m[0m[0m
+[;1mexample/Main.hs:86:8: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘jwk’ shadows the existing binding
+      imported from ‘Crypto.JWT’ at example/Main.hs:15:1-17
+      (and originally defined in ‘Crypto.JOSE.Header’)[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m86 |[0m[0m   Just [;1m[35mjwk[0m[0m <- decode <$> L.readFile jwkFilename
+[;1m[34m   |[0m[0m[;1m[35m        ^^^[0m[0m
+[0m[0m[0m
+[;1mexample/Main.hs:102:8: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wname-shadowing[0m[0m[;1m][0m[0m[;1m
+    This binding for ‘jwk’ shadows the existing binding
+      imported from ‘Crypto.JWT’ at example/Main.hs:15:1-17
+      (and originally defined in ‘Crypto.JOSE.Header’)[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m102 |[0m[0m   Just [;1m[35mjwk[0m[0m <- decode <$> L.readFile jwkFilename
+[;1m[34m    |[0m[0m[;1m[35m        ^^^[0m[0m
+[0m[0m[0mLinking .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/example/example ...
+Installing library in /Users/stevenmaccoun/projects/smaccoun-homepage/back-end/.stack-work/install/x86_64-osx/lts-11.2/8.2.2/lib/x86_64-osx-ghc-8.2.2/jose-0.6.0.3-Cb4cBCvhYlX38lFEQEf7sG
+Installing executable example in /Users/stevenmaccoun/projects/smaccoun-homepage/back-end/.stack-work/install/x86_64-osx/lts-11.2/8.2.2/bin
+Registering library for jose-0.6.0.3..

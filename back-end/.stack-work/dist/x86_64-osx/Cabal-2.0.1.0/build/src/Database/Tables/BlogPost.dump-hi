@@ -1,0 +1,232 @@
+
+==================== FINAL INTERFACE ====================
+2018-06-01 20:39:30.133457 UTC
+
+interface api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Database.Tables.BlogPost [family instance module] 8022
+  interface hash: cc7c3762f1e50da15d8f3c136e06231f
+  ABI hash: 6a9e3132f6379416370faa037e29db95
+  export-list hash: 72302f7575534d3b93d50aa393a2dd4c
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: c784d79aa169650a83275558f275a26f
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Database.Tables.BlogPost.BlogPost
+  Database.Tables.BlogPost.BlogPostBaseT{Database.Tables.BlogPost.BlogPostBaseT content title}
+  Database.Tables.BlogPost.BlogPostEntity
+  Database.Tables.BlogPost.BlogPostT
+module dependencies: AppPrelude Database.MasterEntity
+package dependencies: StateVar-1.1.0.4 adjunctions-4.4
+                      aeson-1.2.4.0 array-0.5.2.0 async-2.1.1.1 attoparsec-0.13.2.2
+                      base-4.10.1.0 base-compat-0.9.3 base-orphans-0.7 beam-core-0.7.2.1
+                      bifunctors-5.5.2 binary-0.8.5.1 bytestring-0.10.8.2
+                      call-stack-0.1.0 comonad-5.0.3 containers-0.5.10.2
+                      contravariant-1.4.1 deepseq-1.4.3.0 distributive-0.5.3
+                      dlist-0.8.0.4 exceptions-0.8.3 finite-typelits-0.1.3.0 free-4.12.4
+                      ghc-boot-th-8.2.2 ghc-prim-0.5.1.1 hashable-1.2.7.0
+                      integer-gmp-1.0.1.0 integer-logarithms-1.0.2.1 kan-extensions-5.1
+                      lens-4.16.1 microlens-0.4.8.3 mtl-2.2.2 prelude-extras-0.4.0.3
+                      pretty-1.1.3.3 primitive-0.6.3.0 profunctors-5.2.2 protolude-0.2.1
+                      random-1.1 reflection-2.1.3 safe-0.3.17 scientific-0.3.5.3
+                      semigroupoids-5.2.2 stm-2.4.5.0 tagged-0.8.5
+                      template-haskell-2.12.0.0 text-1.2.3.0 th-abstraction-0.2.6.0
+                      time-1.8.0.2 time-locale-compat-0.1.1.3 transformers-0.5.2.0
+                      transformers-compat-0.5.1.4 unordered-containers-0.2.9.0
+                      uuid-1.3.13 uuid-types-1.0.3 vector-0.12.0.1 vector-sized-0.6.1.0
+orphans: reflection-2.1.3:Data.Reflection
+         attoparsec-0.13.2.2:Data.Attoparsec.Text.Internal
+         attoparsec-0.13.2.2:Data.Attoparsec.ByteString.Char8
+         vector-0.12.0.1:Data.Vector.Unboxed
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         beam-core-0.7.2.1:Database.Beam.Backend.Types
+         stm-2.4.5.0:Control.Monad.STM
+         hashable-1.2.7.0:Data.Hashable.Generic text-1.2.3.0:Data.Text.Lazy
+         text-1.2.3.0:Data.Text binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.0:Data.Text.Show base-orphans-0.7:Data.Orphans
+         vector-0.12.0.1:Data.Vector.Fusion.Bundle
+         transformers-0.5.2.0:Control.Monad.Trans.Error
+         base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: adjunctions-4.4:Data.Functor.Rep
+                         aeson-1.2.4.0:Data.Aeson.Types.Internal
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Database.MasterEntity
+                         attoparsec-0.13.2.2:Data.Attoparsec.Internal.Types
+                         base-4.10.1.0:Control.Applicative base-4.10.1.0:Data.Complex
+                         base-4.10.1.0:Data.Either base-4.10.1.0:Data.Functor.Compose
+                         base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats
+                         beam-core-0.7.2.1:Database.Beam.Backend.SQL.AST
+                         beam-core-0.7.2.1:Database.Beam.Backend.SQL.Builder
+                         beam-core-0.7.2.1:Database.Beam.Backend.Types
+                         beam-core-0.7.2.1:Database.Beam.Query.Combinators
+                         beam-core-0.7.2.1:Database.Beam.Query.CustomSQL
+                         beam-core-0.7.2.1:Database.Beam.Query.Internal
+                         beam-core-0.7.2.1:Database.Beam.Query.Types
+                         beam-core-0.7.2.1:Database.Beam.Schema.Tables
+                         bifunctors-5.5.2:Data.Bifunctor.Biff
+                         bifunctors-5.5.2:Data.Bifunctor.Clown
+                         bifunctors-5.5.2:Data.Bifunctor.Fix
+                         bifunctors-5.5.2:Data.Bifunctor.Flip
+                         bifunctors-5.5.2:Data.Bifunctor.Join
+                         bifunctors-5.5.2:Data.Bifunctor.Joker
+                         bifunctors-5.5.2:Data.Bifunctor.Product
+                         bifunctors-5.5.2:Data.Bifunctor.Sum
+                         bifunctors-5.5.2:Data.Bifunctor.Tannen
+                         bifunctors-5.5.2:Data.Bifunctor.Wrapped
+                         containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal containers-0.5.10.2:Data.Tree
+                         dlist-0.8.0.4:Data.DList
+                         finite-typelits-0.1.3.0:Data.Finite.Internal
+                         ghc-boot-th-8.2.2:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.2.2:GHC.LanguageExtensions.Type
+                         kan-extensions-5.1:Data.Functor.Day
+                         kan-extensions-5.1:Data.Functor.Yoneda lens-4.16.1:Control.Lens.At
+                         lens-4.16.1:Control.Lens.Internal.Indexed
+                         lens-4.16.1:Control.Lens.Reified lens-4.16.1:Control.Lens.Tuple
+                         lens-4.16.1:Control.Lens.Wrapped lens-4.16.1:Control.Lens.Zoom
+                         microlens-0.4.8.3:Lens.Micro.Internal
+                         pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.3.0:Control.Monad.Primitive
+                         primitive-0.6.3.0:Data.Primitive.Array
+                         primitive-0.6.3.0:Data.Primitive.ByteArray
+                         profunctors-5.2.2:Data.Profunctor.Composition
+                         profunctors-5.2.2:Data.Profunctor.Rep tagged-0.8.5:Data.Tagged
+                         template-haskell-2.12.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.3.0:Data.Text text-1.2.3.0:Data.Text.Lazy
+                         th-abstraction-0.2.6.0:Language.Haskell.TH.Datatype
+                         unordered-containers-0.2.9.0:Data.HashMap.Base
+                         unordered-containers-0.2.9.0:Data.HashSet
+                         uuid-types-1.0.3:Data.UUID.Types.Internal
+                         uuid-types-1.0.3:Data.UUID.Types.Internal.Builder
+                         vector-0.12.0.1:Data.Vector vector-0.12.0.1:Data.Vector.Primitive
+                         vector-0.12.0.1:Data.Vector.Storable
+                         vector-0.12.0.1:Data.Vector.Unboxed
+                         vector-0.12.0.1:Data.Vector.Unboxed.Base
+                         vector-sized-0.6.1.0:Data.Vector.Generic.Sized
+import  -/  aeson-1.2.4.0:Data.Aeson 5cd84e444e6f60fb8f170777913acd80
+import  -/  aeson-1.2.4.0:Data.Aeson.Types.FromJSON c68035f23c77bea5e57708c8a25a9f64
+import  -/  aeson-1.2.4.0:Data.Aeson.Types.ToJSON 86962dfb20db2e0af4020bc2a73f050b
+import  -/  AppPrelude 8b403b19a73477bf6ded351e8350cfb7
+  exports: 833a269d86971bb6039e3484bfdc1a18
+import  -/  Database.MasterEntity b1a2d4b24895229e053ed42d9c8dc9a1
+  exports: f1d85d73fc437a442b6c478d886c31af
+  AppEntity 207352dddc77c697348836ee95993208
+import  -/  base-4.10.1.0:Data.Functor.Identity aae7a3124ea5423ea52291a312b43abe
+import  -/  base-4.10.1.0:GHC.Generics c2a8006cab1f0055555a6c72607a574b
+import  -/  beam-core-0.7.2.1:Database.Beam 35fd6826a8eadad243d13d0152a13f87
+import  -/  beam-core-0.7.2.1:Database.Beam.Schema.Tables 05807973f142cbe0c80293f956245dbc
+import  -/  text-1.2.3.0:Data.Text.Internal 5d98ec4bb692174ed69de0b9299773d5
+c934f4d2e060a920242a4d37f15aea03
+  $fBeamableBlogPostBaseT ::
+    Database.Beam.Schema.Tables.Beamable
+      Database.Tables.BlogPost.BlogPostBaseT
+  DFunId
+c934f4d2e060a920242a4d37f15aea03
+  $fFromJSONBlogPostBaseT ::
+    Data.Aeson.Types.FromJSON.FromJSON
+      Database.Tables.BlogPost.BlogPost
+  DFunId
+c934f4d2e060a920242a4d37f15aea03
+  $fGenericBlogPostBaseT ::
+    GHC.Generics.Generic (Database.Tables.BlogPost.BlogPostBaseT f)
+  DFunId
+c934f4d2e060a920242a4d37f15aea03
+  $fToJSONBlogPostBaseT ::
+    Data.Aeson.Types.ToJSON.ToJSON Database.Tables.BlogPost.BlogPost
+  DFunId
+c934f4d2e060a920242a4d37f15aea03
+  $sel:content:BlogPostBaseT ::
+    Database.Tables.BlogPost.BlogPostBaseT f
+    -> Database.Beam.Schema.Tables.Columnar f Data.Text.Internal.Text
+  RecSel Left Database.Tables.BlogPost.BlogPostBaseT
+c934f4d2e060a920242a4d37f15aea03
+  $sel:title:BlogPostBaseT ::
+    Database.Tables.BlogPost.BlogPostBaseT f
+    -> Database.Beam.Schema.Tables.Columnar f Data.Text.Internal.Text
+  RecSel Left Database.Tables.BlogPost.BlogPostBaseT
+a1fc9ad0513e544e1e457c6fda4d7835
+  $tcBlogPostBaseT :: GHC.Types.TyCon
+49d0fe7616fda133357b29770457179d
+  $trModule :: GHC.Types.Module
+c934f4d2e060a920242a4d37f15aea03
+  type BlogPost =
+    Database.Tables.BlogPost.BlogPostBaseT
+      Data.Functor.Identity.Identity
+c934f4d2e060a920242a4d37f15aea03
+  type role BlogPostBaseT nominal
+  data BlogPostBaseT (f :: * -> *)
+    = BlogPostBaseT {title :: Database.Beam.Schema.Tables.Columnar
+                                f Data.Text.Internal.Text,
+                     content :: Database.Beam.Schema.Tables.Columnar
+                                  f Data.Text.Internal.Text}
+657221c24561bb494dce517efa0a54c8
+  type BlogPostEntity =
+    Database.Tables.BlogPost.BlogPostT Data.Functor.Identity.Identity
+79010497cba6ee62b9d0ce5e4283b774
+  type BlogPostT =
+    Database.MasterEntity.AppEntity
+      Database.Tables.BlogPost.BlogPostBaseT
+    :: (* -> *) -> *
+c934f4d2e060a920242a4d37f15aea03
+  axiom Database.Tables.BlogPost.Rep_BlogPostBaseT::
+    [(f :: * -> *)]
+      GHC.Generics.Rep (Database.Tables.BlogPost.BlogPostBaseT f)
+        = GHC.Generics.D1
+            ('GHC.Generics.MetaData
+               "BlogPostBaseT"
+               "Database.Tables.BlogPost"
+               "api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG"
+               'GHC.Types.False)
+            (GHC.Generics.C1
+               ('GHC.Generics.MetaCons
+                  "BlogPostBaseT" 'GHC.Generics.PrefixI 'GHC.Types.True)
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "title")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0
+                     (Database.Beam.Schema.Tables.Columnar f Data.Text.Internal.Text))
+                GHC.Generics.:*: GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "content")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0
+                                      (Database.Beam.Schema.Tables.Columnar
+                                         f Data.Text.Internal.Text))))
+instance Database.Beam.Schema.Tables.Beamable [Database.Tables.BlogPost.BlogPostBaseT]
+  = Database.Tables.BlogPost.$fBeamableBlogPostBaseT
+instance Data.Aeson.Types.FromJSON.FromJSON [Database.Tables.BlogPost.BlogPostBaseT]
+  = Database.Tables.BlogPost.$fFromJSONBlogPostBaseT
+instance GHC.Generics.Generic [Database.Tables.BlogPost.BlogPostBaseT]
+  = Database.Tables.BlogPost.$fGenericBlogPostBaseT
+instance Data.Aeson.Types.ToJSON.ToJSON [Database.Tables.BlogPost.BlogPostBaseT]
+  = Database.Tables.BlogPost.$fToJSONBlogPostBaseT
+family instance GHC.Generics.Rep [Database.Tables.BlogPost.BlogPostBaseT]
+  = Database.Tables.BlogPost.Rep_BlogPostBaseT
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

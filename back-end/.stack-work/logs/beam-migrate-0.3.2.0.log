@@ -1,0 +1,25 @@
+Configuring beam-migrate-0.3.2.0...
+Preprocessing library for beam-migrate-0.3.2.0..
+Building library for beam-migrate-0.3.2.0..
+[ 1 of 20] Compiling Database.Beam.Migrate.SQL.SQL92 ( Database/Beam/Migrate/SQL/SQL92.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/SQL/SQL92.o )
+[ 2 of 20] Compiling Database.Beam.Migrate.Serialization ( Database/Beam/Migrate/Serialization.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/Serialization.o )
+[ 3 of 20] Compiling Database.Beam.Haskell.Syntax ( Database/Beam/Haskell/Syntax.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Haskell/Syntax.o )
+[ 4 of 20] Compiling Database.Beam.Migrate.Types.Predicates ( Database/Beam/Migrate/Types/Predicates.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/Types/Predicates.o )
+[ 5 of 20] Compiling Database.Beam.Migrate.SQL.Types ( Database/Beam/Migrate/SQL/Types.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/SQL/Types.o )
+[ 6 of 20] Compiling Database.Beam.Migrate.Checks ( Database/Beam/Migrate/Checks.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/Checks.o )
+[ 7 of 20] Compiling Database.Beam.Migrate.Generics.Tables ( Database/Beam/Migrate/Generics/Tables.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/Generics/Tables.o )
+[ 8 of 20] Compiling Database.Beam.Migrate.Types.CheckedEntities ( Database/Beam/Migrate/Types/CheckedEntities.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/Types/CheckedEntities.o )
+[ 9 of 20] Compiling Database.Beam.Migrate.Types ( Database/Beam/Migrate/Types.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/Types.o )
+[10 of 20] Compiling Database.Beam.Migrate.SQL.Tables ( Database/Beam/Migrate/SQL/Tables.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/SQL/Tables.o )
+[11 of 20] Compiling Database.Beam.Migrate.SQL.BeamExtensions ( Database/Beam/Migrate/SQL/BeamExtensions.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/SQL/BeamExtensions.o )
+[12 of 20] Compiling Database.Beam.Migrate.SQL ( Database/Beam/Migrate/SQL.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/SQL.o )
+[13 of 20] Compiling Database.Beam.Migrate.SQL.Builder ( Database/Beam/Migrate/SQL/Builder.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/SQL/Builder.o )
+[14 of 20] Compiling Database.Beam.Migrate.Generics.Types ( Database/Beam/Migrate/Generics/Types.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/Generics/Types.o )
+[15 of 20] Compiling Database.Beam.Migrate.Generics ( Database/Beam/Migrate/Generics.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/Generics.o )
+[16 of 20] Compiling Database.Beam.Migrate.Actions ( Database/Beam/Migrate/Actions.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/Actions.o )
+[17 of 20] Compiling Database.Beam.Migrate.Backend ( Database/Beam/Migrate/Backend.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/Backend.o )
+[18 of 20] Compiling Database.Beam.Migrate ( Database/Beam/Migrate.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate.o )
+[19 of 20] Compiling Database.Beam.Migrate.Log ( Database/Beam/Migrate/Log.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/Log.o )
+[20 of 20] Compiling Database.Beam.Migrate.Simple ( Database/Beam/Migrate/Simple.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Migrate/Simple.o )
+Installing library in /Users/stevenmaccoun/projects/smaccoun-homepage/back-end/.stack-work/install/x86_64-osx/lts-11.2/8.2.2/lib/x86_64-osx-ghc-8.2.2/beam-migrate-0.3.2.0-72463dAJjO3GWgyX2qjOt7
+Registering library for beam-migrate-0.3.2.0..

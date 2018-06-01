@@ -1,0 +1,437 @@
+
+==================== FINAL INTERFACE ====================
+2018-06-01 20:39:34.089233 UTC
+
+interface api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:App 8022
+  interface hash: b9be7de3c353f411f11baa3dc16c1264
+  ABI hash: 77bc1fcde7171cc9011458bb7bf39ab6
+  export-list hash: d7ef013b8cc6207a1fe7c332f623a6b4
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 7b724646e7de427302450da55bfc2329
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  App.app
+  App.appServer
+  App.getDBConnection
+  App.logInitialMetaInfo
+  App.nt
+  App.readJWK
+  App.runCustomHandler
+  App.serverWithDocs
+  App.setAppConfig
+  App.startApp
+  App.startServer
+  App.ApiWithDocs
+module dependencies: Api.API Api.Endpoints.Login Api.Endpoints.User
+                     Api.Resource ApiDocs AppPrelude Config.AppConfig Config.DBConfig
+                     Database.Crud Database.MasterEntity Database.Schema
+                     Database.Tables.BlogPost Database.Tables.User Database.Transaction
+                     Init Models.Credentials Models.Login Models.User Pagination
+package dependencies: HUnit-1.6.0.0 QuickCheck-2.10.1
+                      StateVar-1.1.0.4 adjunctions-4.4 aeson-1.2.4.0
+                      ansi-terminal-0.8.0.2 appar-0.1.4 array-0.5.2.0 asn1-encoding-0.9.5
+                      asn1-parse-0.9.4 asn1-types-0.3.2 async-2.1.1.1 attoparsec-0.13.2.2
+                      attoparsec-iso8601-1.0.0.0 auto-update-0.1.4 base-4.10.1.0
+                      base-compat-0.9.3 base-orphans-0.7 base-unicode-symbols-0.2.2.4
+                      base64-bytestring-1.0.0.1 basement-0.0.7 beam-core-0.7.2.1
+                      beam-migrate-0.3.2.0 beam-postgres-0.3.2.1 bifunctors-5.5.2
+                      binary-0.8.5.1 blaze-builder-0.4.1.0 blaze-html-0.9.0.1
+                      blaze-markup-0.8.2.0 bsb-http-chunked-0.0.0.2 byteorder-1.0.4
+                      bytestring-0.10.8.2 bytestring-conversion-0.3.1 call-stack-0.1.0
+                      case-insensitive-1.2.0.11 colour-2.3.4 comonad-5.0.3
+                      concise-0.1.0.1 containers-0.5.10.2 contravariant-1.4.1
+                      cookie-0.4.3 cpphs-1.20.8 crypto-api-0.13.3 cryptohash-0.11.9
+                      cryptonite-0.25 data-default-0.7.1.1 data-default-class-0.1.2.0
+                      data-default-instances-containers-0.0.1
+                      data-default-instances-dlist-0.0.1
+                      data-default-instances-old-locale-0.0.1 deepseq-1.4.3.0
+                      dependent-map-0.2.4.0 dependent-sum-0.4 directory-1.3.0.2
+                      distributive-0.5.3 dlist-0.8.0.4 double-conversion-2.0.2.0
+                      easy-file-0.2.1 entropy-0.3.8 exceptions-0.8.3 fast-logger-2.4.11
+                      file-embed-0.0.10.1 filepath-1.4.1.2 finite-typelits-0.1.3.0
+                      free-4.12.4 generics-sop-0.3.2.0 ghc-boot-th-8.2.2 ghc-prim-0.5.1.1
+                      hashable-1.2.7.0 haskell-src-exts-1.19.1 hourglass-0.2.11
+                      hspec-2.4.8 hspec-core-2.4.8 hspec-expectations-0.8.2
+                      http-api-data-0.3.7.2 http-date-0.0.6.1 http-media-0.7.1.2
+                      http-types-0.12.1 http2-1.6.3 insert-ordered-containers-0.2.1.0
+                      integer-gmp-1.0.1.0 integer-logarithms-1.0.2.1 iproute-1.7.3
+                      jose-0.6.0.3 kan-extensions-5.1 lens-4.16.1 lifted-base-0.2.3.12
+                      memory-0.14.16 microlens-0.4.8.3 mime-types-0.1.0.7 mmorph-1.1.2
+                      monad-control-1.0.2.3 monad-time-0.2 mtl-2.2.2 network-2.6.3.4
+                      network-uri-2.6.1.0 old-locale-1.0.0.7 old-time-1.1.0.3
+                      parallel-3.2.1.1 parsec-3.1.13.0 postgresql-libpq-0.9.4.1
+                      postgresql-simple-0.5.3.0 postgresql-simple-migration-0.1.11.0
+                      pqueue-1.3.2.3 prelude-extras-0.4.0.3 pretty-1.1.3.3
+                      primitive-0.6.3.0 profunctors-5.2.2 protolude-0.2.1
+                      psqueues-0.2.6.0 quickcheck-instances-0.3.18 quickcheck-io-0.2.0
+                      random-1.1 reflection-2.1.3 regex-base-0.93.2 regex-compat-0.95.1
+                      regex-posix-0.95.2 resource-pool-0.2.3.2 resourcet-1.1.11
+                      safe-0.3.17 scientific-0.3.5.3 scrypt-0.5.0 semigroupoids-5.2.2
+                      servant-0.13 servant-auth-0.3.1.0 servant-auth-server-0.3.2.0
+                      servant-blaze-0.8 servant-server-0.13 servant-swagger-1.1.5
+                      servant-swagger-ui-0.2.5.3.9.1 setenv-0.1.1.3
+                      simple-sendfile-0.2.27 singleton-bool-0.1.4 stm-2.4.5.0
+                      streaming-commons-0.1.19 string-conversions-0.4.0.1
+                      stringsearch-0.3.6.6 swagger2-2.2.1 tagged-0.8.5
+                      template-haskell-2.12.0.0 text-1.2.3.0 tf-random-0.5
+                      th-abstraction-0.2.6.0 th-lift-0.7.8 th-lift-instances-0.1.11
+                      time-1.8.0.2 time-locale-compat-0.1.1.3 transformers-0.5.2.0
+                      transformers-base-0.4.4 transformers-compat-0.5.1.4 unix-2.7.2.2
+                      unix-compat-0.5.0.1 unix-time-0.3.8 unliftio-core-0.1.1.0
+                      unordered-containers-0.2.9.0 uri-bytestring-0.3.1.1
+                      utf8-string-1.0.1.1 uuid-1.3.13 uuid-types-1.0.3 vault-0.3.1.0
+                      vector-0.12.0.1 vector-sized-0.6.1.0 wai-3.2.1.2
+                      wai-app-static-3.1.6.2 wai-cors-0.2.6 wai-extra-3.0.22.0
+                      wai-logger-2.3.2 warp-3.2.18.2 word8-0.1.3 x509-1.7.3 zlib-0.6.2
+orphans: api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:ApiDocs
+         regex-posix-0.95.2:Text.Regex.Posix.String
+         regex-posix-0.95.2:Text.Regex.Posix.Sequence
+         regex-posix-0.95.2:Text.Regex.Posix.ByteString.Lazy
+         regex-posix-0.95.2:Text.Regex.Posix.ByteString
+         regex-base-0.93.2:Text.Regex.Base.Context
+         data-default-instances-containers-0.0.1:Data.Default.Instances.Containers
+         data-default-instances-dlist-0.0.1:Data.Default.Instances.DList
+         data-default-instances-old-locale-0.0.1:Data.Default.Instances.OldLocale
+         unix-time-0.3.8:Data.UnixTime.Diff
+         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Database.Tables.User
+         beam-postgres-0.3.2.1:Database.Beam.Postgres.Migrate
+         beam-postgres-0.3.2.1:Database.Beam.Postgres.Connection
+         beam-postgres-0.3.2.1:Database.Beam.Postgres.PgSpecific
+         beam-migrate-0.3.2.0:Database.Beam.Haskell.Syntax
+         haskell-src-exts-1.19.1:Language.Haskell.Exts.Parser
+         beam-postgres-0.3.2.1:Database.Beam.Postgres.Types
+         beam-migrate-0.3.2.0:Database.Beam.Migrate.SQL.Builder
+         pqueue-1.3.2.3:Data.PQueue.Min
+         dependent-map-0.2.4.0:Data.Dependent.Map
+         dependent-sum-0.4:Data.GADT.Compare
+         servant-auth-server-0.3.2.0:Servant.Auth.Server.Internal
+         servant-auth-server-0.3.2.0:Servant.Auth.Server.SetCookieOrphan
+         jose-0.6.0.3:Crypto.JOSE.JWS jose-0.6.0.3:Crypto.JOSE.Error
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Array
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.ByteString
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.CaseInsensitive
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Containers
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Hashable
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.OldTime
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Natural
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Scientific
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Semigroup
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Tagged
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Text
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Time
+         time-1.8.0.2:Data.Time.Clock.TAI
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Transformer
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.UUID
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.UnorderedContainers
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Vector
+         jose-0.6.0.3:Crypto.JOSE.Types.Orphans
+         beam-core-0.7.2.1:Database.Beam.Backend.Types
+         colour-2.3.4:Data.Colour quickcheck-io-0.2.0:Test.QuickCheck.IO
+         swagger2-2.2.1:Data.Swagger.Lens
+         generics-sop-0.3.2.0:Generics.SOP.Instances
+         generics-sop-0.3.2.0:Generics.SOP.Constraint
+         reflection-2.1.3:Data.Reflection base-orphans-0.7:Data.Orphans
+         stm-2.4.5.0:Control.Monad.STM network-2.6.3.4:Network.Socket
+         basement-0.0.7:Basement.UArray.Base basement-0.0.7:Basement.Block
+         attoparsec-0.13.2.2:Data.Attoparsec.ByteString.Char8
+         th-lift-instances-0.1.11:Instances.TH.Lift
+         th-lift-0.7.8:Language.Haskell.TH.Lift
+         vector-0.12.0.1:Data.Vector.Unboxed
+         vector-0.12.0.1:Data.Vector.Fusion.Bundle
+         hashable-1.2.7.0:Data.Hashable.Generic
+         transformers-0.5.2.0:Control.Monad.Trans.Error
+         attoparsec-0.13.2.2:Data.Attoparsec.Text.Internal
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         text-1.2.3.0:Data.Text.Lazy text-1.2.3.0:Data.Text
+         binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.0:Data.Text.Show base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: adjunctions-4.4:Data.Functor.Rep
+                         aeson-1.2.4.0:Data.Aeson.Types.Internal
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Api.Endpoints.Login
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Database.MasterEntity
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Database.Schema
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Database.Tables.BlogPost
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Database.Tables.User
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Models.Credentials
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Models.Login
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Models.User
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Pagination
+                         attoparsec-0.13.2.2:Data.Attoparsec.Internal.Types
+                         base-4.10.1.0:Control.Applicative base-4.10.1.0:Data.Complex
+                         base-4.10.1.0:Data.Either base-4.10.1.0:Data.Functor.Compose
+                         base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats basement-0.0.7:Basement.Block.Base
+                         basement-0.0.7:Basement.Monad
+                         basement-0.0.7:Basement.MutableBuilder basement-0.0.7:Basement.Nat
+                         basement-0.0.7:Basement.NonEmpty
+                         basement-0.0.7:Basement.Numerical.Subtractive
+                         basement-0.0.7:Basement.PrimType basement-0.0.7:Basement.String
+                         basement-0.0.7:Basement.String.Encoding.ASCII7
+                         basement-0.0.7:Basement.String.Encoding.ISO_8859_1
+                         basement-0.0.7:Basement.String.Encoding.UTF16
+                         basement-0.0.7:Basement.String.Encoding.UTF32
+                         basement-0.0.7:Basement.Types.OffsetSize
+                         basement-0.0.7:Basement.UArray.Base
+                         basement-0.0.7:Basement.UTF8.Base
+                         beam-core-0.7.2.1:Database.Beam.Backend.SQL.AST
+                         beam-core-0.7.2.1:Database.Beam.Backend.SQL.Builder
+                         beam-core-0.7.2.1:Database.Beam.Backend.Types
+                         beam-core-0.7.2.1:Database.Beam.Query.Combinators
+                         beam-core-0.7.2.1:Database.Beam.Query.CustomSQL
+                         beam-core-0.7.2.1:Database.Beam.Query.Internal
+                         beam-core-0.7.2.1:Database.Beam.Query.Types
+                         beam-core-0.7.2.1:Database.Beam.Schema.Tables
+                         beam-migrate-0.3.2.0:Database.Beam.Haskell.Syntax
+                         beam-migrate-0.3.2.0:Database.Beam.Migrate.Actions
+                         beam-migrate-0.3.2.0:Database.Beam.Migrate.Checks
+                         beam-migrate-0.3.2.0:Database.Beam.Migrate.SQL.Builder
+                         beam-migrate-0.3.2.0:Database.Beam.Migrate.Serialization
+                         beam-migrate-0.3.2.0:Database.Beam.Migrate.Types.CheckedEntities
+                         beam-migrate-0.3.2.0:Database.Beam.Migrate.Types.Predicates
+                         beam-postgres-0.3.2.1:Database.Beam.Postgres.Extensions
+                         beam-postgres-0.3.2.1:Database.Beam.Postgres.PgSpecific
+                         beam-postgres-0.3.2.1:Database.Beam.Postgres.Syntax
+                         beam-postgres-0.3.2.1:Database.Beam.Postgres.Types
+                         bifunctors-5.5.2:Data.Bifunctor.Biff
+                         bifunctors-5.5.2:Data.Bifunctor.Clown
+                         bifunctors-5.5.2:Data.Bifunctor.Fix
+                         bifunctors-5.5.2:Data.Bifunctor.Flip
+                         bifunctors-5.5.2:Data.Bifunctor.Join
+                         bifunctors-5.5.2:Data.Bifunctor.Joker
+                         bifunctors-5.5.2:Data.Bifunctor.Product
+                         bifunctors-5.5.2:Data.Bifunctor.Sum
+                         bifunctors-5.5.2:Data.Bifunctor.Tannen
+                         bifunctors-5.5.2:Data.Bifunctor.Wrapped
+                         containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal containers-0.5.10.2:Data.Tree
+                         cryptonite-0.25:Crypto.Error.Types
+                         cryptonite-0.25:Crypto.Hash.Blake2
+                         cryptonite-0.25:Crypto.Hash.Blake2b
+                         cryptonite-0.25:Crypto.Hash.Blake2bp
+                         cryptonite-0.25:Crypto.Hash.Blake2s
+                         cryptonite-0.25:Crypto.Hash.Blake2sp
+                         cryptonite-0.25:Crypto.Hash.Keccak cryptonite-0.25:Crypto.Hash.MD2
+                         cryptonite-0.25:Crypto.Hash.MD4 cryptonite-0.25:Crypto.Hash.MD5
+                         cryptonite-0.25:Crypto.Hash.RIPEMD160
+                         cryptonite-0.25:Crypto.Hash.SHA1 cryptonite-0.25:Crypto.Hash.SHA224
+                         cryptonite-0.25:Crypto.Hash.SHA256 cryptonite-0.25:Crypto.Hash.SHA3
+                         cryptonite-0.25:Crypto.Hash.SHA384
+                         cryptonite-0.25:Crypto.Hash.SHA512
+                         cryptonite-0.25:Crypto.Hash.SHA512t
+                         cryptonite-0.25:Crypto.Hash.SHAKE
+                         cryptonite-0.25:Crypto.Hash.Skein256
+                         cryptonite-0.25:Crypto.Hash.Skein512
+                         cryptonite-0.25:Crypto.Hash.Tiger
+                         cryptonite-0.25:Crypto.Hash.Whirlpool dlist-0.8.0.4:Data.DList
+                         finite-typelits-0.1.3.0:Data.Finite.Internal
+                         generics-sop-0.3.2.0:Generics.SOP.BasicFunctors
+                         generics-sop-0.3.2.0:Generics.SOP.GGP
+                         generics-sop-0.3.2.0:Generics.SOP.Instances
+                         generics-sop-0.3.2.0:Generics.SOP.NP
+                         generics-sop-0.3.2.0:Generics.SOP.NS
+                         ghc-boot-th-8.2.2:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.2.2:GHC.LanguageExtensions.Type
+                         haskell-src-exts-1.19.1:Language.Haskell.Exts.SrcLoc
+                         haskell-src-exts-1.19.1:Language.Haskell.Exts.Syntax
+                         hspec-core-2.4.8:Test.Hspec.Core.Example
+                         http-api-data-0.3.7.2:Web.Internal.FormUrlEncoded
+                         insert-ordered-containers-0.2.1.0:Data.HashMap.Strict.InsOrd
+                         iproute-1.7.3:Data.IP.Addr iproute-1.7.3:Data.IP.Range
+                         kan-extensions-5.1:Data.Functor.Day
+                         kan-extensions-5.1:Data.Functor.Yoneda lens-4.16.1:Control.Lens.At
+                         lens-4.16.1:Control.Lens.Internal.Indexed
+                         lens-4.16.1:Control.Lens.Reified lens-4.16.1:Control.Lens.Tuple
+                         lens-4.16.1:Control.Lens.Wrapped lens-4.16.1:Control.Lens.Zoom
+                         microlens-0.4.8.3:Lens.Micro.Internal
+                         monad-control-1.0.2.3:Control.Monad.Trans.Control
+                         network-uri-2.6.1.0:Network.URI
+                         pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.3.0:Control.Monad.Primitive
+                         primitive-0.6.3.0:Data.Primitive.Array
+                         primitive-0.6.3.0:Data.Primitive.ByteArray
+                         profunctors-5.2.2:Data.Profunctor.Composition
+                         profunctors-5.2.2:Data.Profunctor.Rep
+                         resourcet-1.1.11:Control.Monad.Trans.Resource.Internal
+                         servant-0.13:Servant.API.ContentTypes
+                         servant-0.13:Servant.API.IsSecure servant-0.13:Servant.API.Stream
+                         servant-0.13:Servant.API.Verbs servant-0.13:Servant.Utils.Links
+                         servant-auth-server-0.3.2.0:Servant.Auth.Server.Internal
+                         servant-auth-server-0.3.2.0:Servant.Auth.Server.Internal.AddSetCookie
+                         servant-auth-server-0.3.2.0:Servant.Auth.Server.Internal.Class
+                         servant-auth-server-0.3.2.0:Servant.Auth.Server.Internal.ConfigTypes
+                         servant-auth-server-0.3.2.0:Servant.Auth.Server.Internal.Types
+                         servant-server-0.13:Servant.Server.Internal
+                         servant-server-0.13:Servant.Server.Internal.BasicAuth
+                         servant-server-0.13:Servant.Server.Internal.Handler
+                         servant-server-0.13:Servant.Server.Internal.RoutingApplication
+                         swagger2-2.2.1:Data.Swagger.Internal
+                         swagger2-2.2.1:Data.Swagger.Internal.TypeShape
+                         swagger2-2.2.1:Data.Swagger.Lens tagged-0.8.5:Data.Tagged
+                         template-haskell-2.12.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.3.0:Data.Text text-1.2.3.0:Data.Text.Lazy
+                         th-abstraction-0.2.6.0:Language.Haskell.TH.Datatype
+                         unordered-containers-0.2.9.0:Data.HashMap.Base
+                         unordered-containers-0.2.9.0:Data.HashSet
+                         uri-bytestring-0.3.1.1:URI.ByteString.Types
+                         uuid-types-1.0.3:Data.UUID.Types.Internal
+                         uuid-types-1.0.3:Data.UUID.Types.Internal.Builder
+                         vector-0.12.0.1:Data.Vector vector-0.12.0.1:Data.Vector.Primitive
+                         vector-0.12.0.1:Data.Vector.Storable
+                         vector-0.12.0.1:Data.Vector.Unboxed
+                         vector-0.12.0.1:Data.Vector.Unboxed.Base
+                         vector-sized-0.6.1.0:Data.Vector.Generic.Sized
+                         zlib-0.6.2:Codec.Compression.Zlib.Stream
+import  -/  aeson-1.2.4.0:Data.Aeson 5cd84e444e6f60fb8f170777913acd80
+import  -/  Api.API 52fe18515a79c84ed42004aa763fef00
+  exports: 6367cf2f40155d45b2ebe894dbb564b4
+  API 2041f0315f0c5befd8cc47e5e400e655
+  api acffc89a1c2c063352a3d264de82e1c0
+  serverAPI afbc544d7e91114a5030fa262a2f34a3
+import  -/  ApiDocs 080fe03c306bd4a367985b65b290463a
+  exports: 31ac3c359eec9e2227ee2c08e92b1feb
+  SwaggerAPI 3f70e3f63f3f65d59b6e72e5be9fa082
+  docServer d775a6c59d4dd48c050da8e216e42ff5
+import  -/  AppPrelude 8b403b19a73477bf6ded351e8350cfb7
+  exports: 833a269d86971bb6039e3484bfdc1a18
+import  -/  Config.AppConfig 7d576d23810cd1b65f88216a83976ec5
+  exports: 46bae506e8b4afb88a7919aba70a4ed4
+  $sel:_appLogger:Config a4faf9ca236ee4900c19340fceccd695
+  $sel:runAppM:AppM 4835711703ef66b0a4b8c73a430a8dd9
+  AppM 4835711703ef66b0a4b8c73a430a8dd9
+  Config 83db534a8e4f53b501e1041b0152fe9d
+  Config a4faf9ca236ee4900c19340fceccd695
+  DBConn 8186c5b0f3ea5525bfa901caf290fe6a
+  DBConn f159b7409f26e43faeda24c4a1c1c869
+  Environment b93ca5910c262a5587e4a98d7523fbad
+  File 13ab0344e2d1ca0459d261802f31ba7a
+  LogTo 8dd8ac5de4bb143c5fc3cd263a08e238
+  STDOut fc58f9d6dcd18d689f06d15f58ea3a68
+import  -/  Config.DBConfig 62dbd7c2eb68177307e1e027529559f7
+  exports: 1e864edccb3fe1f877e804155505d8e4
+  DBConfig dbbe3cd0fe88982b5a7869b9065020a5
+  connInfoToPG bd5257ecda08398250f3bf7ae318a055
+import  -/  Init dffa861fe3d4d25975b637c31a1f05f8
+  exports: 6c78dffec344efe9734f328a0940cb75
+  $sel:dbEnvConfig:EnvConfig 3b16aff607a41973c281d4c190492f65
+  $sel:port:EnvConfig 3b16aff607a41973c281d4c190492f65
+  $sel:runEnv:EnvConfig 3b16aff607a41973c281d4c190492f65
+  EnvConfig 1f623e5fce1edbcab242f524e3532f66
+  lookupEnvDefault d0316f41c726231845c525ad9059e213
+  lookupEnvOrError 2f49719b768b28bc30705f5b40b64e66
+  makeLogger 80a1a7197cb7591c1053092aadd3a3c1
+  makeMiddleware 0972b4a85820094f1f29d8af8f4f4d09
+  mkPool 3c76b0fd21cfe494b4761d22226fd33e
+  readEnv 5bfa29963c8e04af26bedf927d13ae20
+  runAppMigrations a592d0bf498185f5f3e1df4d042ac336
+import  -/  base-4.10.1.0:Data.Either d7dae5d9bf298dee616e465c14b5d60e
+import  -/  base-4.10.1.0:Data.Maybe 07738c5485acb328136bb15596f8b845
+import  -/  base-4.10.1.0:Data.Monoid c0108b166e27f747671c7fe4ffb11019
+import  -/  base-4.10.1.0:Data.OldList 555420b092ca8cf0a8f9666bc0e07dcf
+import  -/  base-4.10.1.0:Data.Proxy da449059b879cc23dde5f0d9cfa646e9
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.Show 0a8ce2b5e533d1c2cfb7954e6736be45
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  bytestring-0.10.8.2:Data.ByteString.Lazy 407de9fed3a4d09c2dba0f60d6b87c94
+import  -/  fast-logger-2.4.11:System.Log.FastLogger 10c059f9fdc65865c93b3d51fbdb3c96
+import  -/  fast-logger-2.4.11:System.Log.FastLogger.LogStr d6a8e95f2d9f8cfdfba33e371dea799c
+import  -/  ghc-prim-0.5.1.1:GHC.Types b1fd0716441595db508c1a74387bf394
+import  -/  jose-0.6.0.3:Crypto.JOSE.JWK a1f5c5a8bbb8caf852a16f1eac231c34
+import  -/  mtl-2.2.2:Control.Monad.Error.Class 2adfab0432a1e2ba3b17fda5c892a24c
+import  -/  protolude-0.2.1:Protolude 308e072dce222137abc3023f1ea92ca4
+import  -/  protolude-0.2.1:Protolude.Panic 989d6520a174c020e1946a82cd3ecec7
+import  -/  servant-0.13:Servant.API.Alternative ee7842eab564411ef79b4155d342a242
+import  -/  servant-auth-0.3.1.0:Servant.Auth 81fbdfe5e39529881004372835edeed0
+import  -/  servant-auth-server-0.3.2.0:Servant.Auth.Server 0f177893b4a7b417bcc686f6de09cee0
+import  -/  servant-auth-server-0.3.2.0:Servant.Auth.Server.Internal.ConfigTypes fc709d50853e0fc4452438dce1959de1
+import  -/  servant-server-0.13:Servant 01fcafd92e3ac5f093a1cea34d2b3446
+import  -/  servant-server-0.13:Servant.Server 6ffec4d51c3a1ebad4a2a3fe086e851c
+import  -/  servant-server-0.13:Servant.Server.Internal 1f44df347b2dd81f7d589ea301553fd4
+import  -/  servant-server-0.13:Servant.Server.Internal.Context cdab576b39515bb2fbf93dd4d48a3edd
+import  -/  servant-server-0.13:Servant.Server.Internal.Handler 81646db73e6242e20a2461a034e057bc
+import  -/  servant-server-0.13:Servant.Server.Internal.ServantErr 9facad16668453d8b3617dff799a9977
+import  -/  text-1.2.3.0:Data.Text f71e7bf8ed59cf4f893cddae1bf8c3d3
+import  -/  text-1.2.3.0:Data.Text.Encoding bd8824e4f39ed6411adcf79d12cdaaa9
+import  -/  text-1.2.3.0:Data.Text.Internal 5d98ec4bb692174ed69de0b9299773d5
+import  -/  text-1.2.3.0:Data.Text.Show e6e404e5ba6a54450a48a17eff2a219c
+import  -/  transformers-0.5.2.0:Control.Monad.Trans.Reader cc12564dc0d2121844a0316ee821dfff
+import  -/  wai-3.2.1.2:Network.Wai 7b2aaf368731f8a56e7e6fa340b46e11
+import  -/  warp-3.2.18.2:Network.Wai.Handler.Warp b3023bd8406ad901323b3321db361a9f
+import  -/  warp-3.2.18.2:Network.Wai.Handler.Warp.Run e0d0728efa5cd199f44700e2a955c10e
+import  -/  warp-3.2.18.2:Network.Wai.Handler.Warp.Types 55515798ad130e606f076b9c8b345346
+159c7bf581072ee5e4e37a112c6d23c9
+  $trModule :: GHC.Types.Module
+feba6c64217294815f7e14ad6ca0d628
+  type ApiWithDocs =
+    Api.API.API '[Servant.Auth.JWT]
+    Servant.API.Alternative.:<|> ApiDocs.SwaggerAPI
+86c70d8a8f4ef2faea346261cd8d4cb0
+  app :: Config.AppConfig.Config -> Network.Wai.Application
+8383b63d22b570277d19bd283c1f55a4
+  appServer ::
+    Config.AppConfig.Config
+    -> Servant.Auth.Server.Internal.ConfigTypes.JWTSettings
+    -> Servant.Server.Internal.Server (Api.API.API auths)
+afd4dfa1d855b03696317e562eed0230
+  getDBConnection ::
+    Config.DBConfig.DBConfig -> GHC.Types.IO Config.AppConfig.DBConn
+5148719cf228b74125d12071749ac2dd
+  logInitialMetaInfo ::
+    (GHC.Show.Show a, GHC.Show.Show a1, GHC.Show.Show a2) =>
+    a2 -> a1 -> a -> [Data.Text.Internal.Text] -> [GHC.Types.Char]
+1d2f5d315fd2e623ff9d68d266340ec6
+  nt ::
+    Config.AppConfig.Config
+    -> Config.AppConfig.AppM a
+    -> Servant.Server.Internal.Handler.Handler a
+8876c16b236359b2799498652df82433
+  readJWK :: GHC.Types.IO Crypto.JOSE.JWK.JWK
+3a8d72eca7b4030da7207b914d68949b
+  runCustomHandler ::
+    Config.AppConfig.Config
+    -> Config.AppConfig.AppM a
+    -> Servant.Server.Internal.Handler.Handler a
+fa0737f82b0b3e3c3e3199d64bd86967
+  serverWithDocs ::
+    Config.AppConfig.Config
+    -> Servant.Auth.Server.Internal.ConfigTypes.JWTSettings
+    -> Servant.Server.Internal.Server App.ApiWithDocs
+73d97ab256561a001ca67b2b8e0a8090
+  setAppConfig ::
+    Config.AppConfig.Environment
+    -> Config.DBConfig.DBConfig
+    -> [Data.Text.Internal.Text]
+    -> GHC.Types.IO (Config.AppConfig.Config, Config.AppConfig.LogTo)
+f467633cb3afff867b17c12220487ee7
+  startApp :: [[GHC.Types.Char]] -> GHC.Types.IO ()
+b2f62cc1ae50dcfae7bc0ec31fa52019
+  startServer ::
+    Network.Wai.Handler.Warp.Types.Port
+    -> (Network.Wai.Application -> Network.Wai.Application)
+    -> Config.AppConfig.Config
+    -> GHC.Types.IO ()
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

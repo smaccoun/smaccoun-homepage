@@ -1,0 +1,15 @@
+Configuring beam-postgres-0.3.2.1...
+Preprocessing library for beam-postgres-0.3.2.1..
+Building library for beam-postgres-0.3.2.1..
+[ 1 of 10] Compiling Database.Beam.Postgres.Syntax ( Database/Beam/Postgres/Syntax.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Postgres/Syntax.o )
+[ 2 of 10] Compiling Database.Beam.Postgres.Types ( Database/Beam/Postgres/Types.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Postgres/Types.o )
+[ 3 of 10] Compiling Database.Beam.Postgres.PgSpecific ( Database/Beam/Postgres/PgSpecific.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Postgres/PgSpecific.o )
+[ 4 of 10] Compiling Database.Beam.Postgres.Full ( Database/Beam/Postgres/Full.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Postgres/Full.o )
+[ 5 of 10] Compiling Database.Beam.Postgres.Extensions ( Database/Beam/Postgres/Extensions.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Postgres/Extensions.o )
+[ 6 of 10] Compiling Database.Beam.Postgres.PgCrypto ( Database/Beam/Postgres/PgCrypto.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Postgres/PgCrypto.o )
+[ 7 of 10] Compiling Database.Beam.Postgres.Connection ( Database/Beam/Postgres/Connection.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Postgres/Connection.o )
+[ 8 of 10] Compiling Database.Beam.Postgres.Migrate ( Database/Beam/Postgres/Migrate.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Postgres/Migrate.o )
+[ 9 of 10] Compiling Database.Beam.Postgres.Conduit ( Database/Beam/Postgres/Conduit.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Postgres/Conduit.o )
+[10 of 10] Compiling Database.Beam.Postgres ( Database/Beam/Postgres.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Postgres.o )
+Installing library in /Users/stevenmaccoun/projects/smaccoun-homepage/back-end/.stack-work/install/x86_64-osx/lts-11.2/8.2.2/lib/x86_64-osx-ghc-8.2.2/beam-postgres-0.3.2.1-5fZyQyiCCRODAvuIiF72AJ
+Registering library for beam-postgres-0.3.2.1..

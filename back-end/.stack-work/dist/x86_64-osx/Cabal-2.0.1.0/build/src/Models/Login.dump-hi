@@ -1,0 +1,195 @@
+
+==================== FINAL INTERFACE ====================
+2018-06-01 20:39:31.431329 UTC
+
+interface api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Models.Login [family instance module] 8022
+  interface hash: 181e484d02da99c07deec46dc9fc838f
+  ABI hash: 43f032ae314cc35e4f4732edd45ce532
+  export-list hash: e3e001901de02a392392f88a781dfc45
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 0538569fcf8dbd48c62f559cbc760588
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Models.Login.Login{Models.Login.Login email password}
+module dependencies: AppPrelude Models.Credentials
+package dependencies: StateVar-1.1.0.4 adjunctions-4.4
+                      aeson-1.2.4.0 array-0.5.2.0 async-2.1.1.1 attoparsec-0.13.2.2
+                      base-4.10.1.0 base-compat-0.9.3 base-orphans-0.7 bifunctors-5.5.2
+                      binary-0.8.5.1 bytestring-0.10.8.2 call-stack-0.1.0 comonad-5.0.3
+                      containers-0.5.10.2 contravariant-1.4.1 deepseq-1.4.3.0
+                      distributive-0.5.3 dlist-0.8.0.4 exceptions-0.8.3 free-4.12.4
+                      ghc-boot-th-8.2.2 ghc-prim-0.5.1.1 hashable-1.2.7.0
+                      integer-gmp-1.0.1.0 integer-logarithms-1.0.2.1 kan-extensions-5.1
+                      lens-4.16.1 mtl-2.2.2 prelude-extras-0.4.0.3 pretty-1.1.3.3
+                      primitive-0.6.3.0 profunctors-5.2.2 protolude-0.2.1 random-1.1
+                      reflection-2.1.3 safe-0.3.17 scientific-0.3.5.3 semigroupoids-5.2.2
+                      stm-2.4.5.0 tagged-0.8.5 template-haskell-2.12.0.0 text-1.2.3.0
+                      th-abstraction-0.2.6.0 time-1.8.0.2 time-locale-compat-0.1.1.3
+                      transformers-0.5.2.0 transformers-compat-0.5.1.4
+                      unordered-containers-0.2.9.0 uuid-types-1.0.3 vector-0.12.0.1
+orphans: reflection-2.1.3:Data.Reflection
+         base-orphans-0.7:Data.Orphans stm-2.4.5.0:Control.Monad.STM
+         attoparsec-0.13.2.2:Data.Attoparsec.Text.Internal
+         attoparsec-0.13.2.2:Data.Attoparsec.ByteString.Char8
+         vector-0.12.0.1:Data.Vector.Unboxed
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         hashable-1.2.7.0:Data.Hashable.Generic text-1.2.3.0:Data.Text.Lazy
+         vector-0.12.0.1:Data.Vector.Fusion.Bundle
+         transformers-0.5.2.0:Control.Monad.Trans.Error
+         text-1.2.3.0:Data.Text binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.0:Data.Text.Show base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: adjunctions-4.4:Data.Functor.Rep
+                         aeson-1.2.4.0:Data.Aeson.Types.Internal
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Models.Credentials
+                         attoparsec-0.13.2.2:Data.Attoparsec.Internal.Types
+                         base-4.10.1.0:Control.Applicative base-4.10.1.0:Data.Complex
+                         base-4.10.1.0:Data.Either base-4.10.1.0:Data.Functor.Compose
+                         base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats bifunctors-5.5.2:Data.Bifunctor.Biff
+                         bifunctors-5.5.2:Data.Bifunctor.Clown
+                         bifunctors-5.5.2:Data.Bifunctor.Fix
+                         bifunctors-5.5.2:Data.Bifunctor.Flip
+                         bifunctors-5.5.2:Data.Bifunctor.Join
+                         bifunctors-5.5.2:Data.Bifunctor.Joker
+                         bifunctors-5.5.2:Data.Bifunctor.Product
+                         bifunctors-5.5.2:Data.Bifunctor.Sum
+                         bifunctors-5.5.2:Data.Bifunctor.Tannen
+                         bifunctors-5.5.2:Data.Bifunctor.Wrapped
+                         containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal containers-0.5.10.2:Data.Tree
+                         dlist-0.8.0.4:Data.DList ghc-boot-th-8.2.2:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.2.2:GHC.LanguageExtensions.Type
+                         kan-extensions-5.1:Data.Functor.Day
+                         kan-extensions-5.1:Data.Functor.Yoneda lens-4.16.1:Control.Lens.At
+                         lens-4.16.1:Control.Lens.Internal.Indexed
+                         lens-4.16.1:Control.Lens.Reified lens-4.16.1:Control.Lens.Tuple
+                         lens-4.16.1:Control.Lens.Wrapped lens-4.16.1:Control.Lens.Zoom
+                         pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.3.0:Control.Monad.Primitive
+                         primitive-0.6.3.0:Data.Primitive.Array
+                         primitive-0.6.3.0:Data.Primitive.ByteArray
+                         profunctors-5.2.2:Data.Profunctor.Composition
+                         profunctors-5.2.2:Data.Profunctor.Rep tagged-0.8.5:Data.Tagged
+                         template-haskell-2.12.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.3.0:Data.Text text-1.2.3.0:Data.Text.Lazy
+                         th-abstraction-0.2.6.0:Language.Haskell.TH.Datatype
+                         unordered-containers-0.2.9.0:Data.HashMap.Base
+                         unordered-containers-0.2.9.0:Data.HashSet
+                         uuid-types-1.0.3:Data.UUID.Types.Internal
+                         uuid-types-1.0.3:Data.UUID.Types.Internal.Builder
+                         vector-0.12.0.1:Data.Vector vector-0.12.0.1:Data.Vector.Primitive
+                         vector-0.12.0.1:Data.Vector.Storable
+                         vector-0.12.0.1:Data.Vector.Unboxed
+                         vector-0.12.0.1:Data.Vector.Unboxed.Base
+import  -/  aeson-1.2.4.0:Data.Aeson 5cd84e444e6f60fb8f170777913acd80
+import  -/  aeson-1.2.4.0:Data.Aeson.Types.FromJSON c68035f23c77bea5e57708c8a25a9f64
+import  -/  AppPrelude 8b403b19a73477bf6ded351e8350cfb7
+  exports: 833a269d86971bb6039e3484bfdc1a18
+import  -/  Models.Credentials ef28ab83e80da5ba417f52f2420651ed
+  exports: 6431f93a3ffcab558fb70a7ab1e8db5a
+  Email e64980b59617cdcdeb48948f7a153e95
+  Password f10185e0b797b633037f8b2ba5eb3c50
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.Generics c2a8006cab1f0055555a6c72607a574b
+import  -/  base-4.10.1.0:GHC.Read 0abfbe8a9b13202e313efc3bc2f2a3e6
+import  -/  base-4.10.1.0:GHC.Show 0a8ce2b5e533d1c2cfb7954e6736be45
+import  -/  base-4.10.1.0:Text.ParserCombinators.ReadPrec 043a8dc96e82690dac5a09fb8e44e9bc
+import  -/  base-4.10.1.0:Text.Read.Lex aff0420c14a3e1f3bb0ee26cd0646682
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
+69fa7c528455da72779fdbdc445ebb32
+  $fEqLogin :: GHC.Classes.Eq Models.Login.Login
+  DFunId
+69fa7c528455da72779fdbdc445ebb32
+  $fFromJSONLogin ::
+    Data.Aeson.Types.FromJSON.FromJSON Models.Login.Login
+  DFunId
+69fa7c528455da72779fdbdc445ebb32
+  $fGenericLogin :: GHC.Generics.Generic Models.Login.Login
+  DFunId
+69fa7c528455da72779fdbdc445ebb32
+  $fReadLogin :: GHC.Read.Read Models.Login.Login
+  DFunId
+69fa7c528455da72779fdbdc445ebb32
+  $fShowLogin :: GHC.Show.Show Models.Login.Login
+  DFunId
+69fa7c528455da72779fdbdc445ebb32
+  $sel:email:Login :: Models.Login.Login -> Models.Credentials.Email
+  RecSel Left Models.Login.Login
+69fa7c528455da72779fdbdc445ebb32
+  $sel:password:Login ::
+    Models.Login.Login -> Models.Credentials.Password
+  RecSel Left Models.Login.Login
+a22dbbfa100715b1819158b6a6324e12
+  $tc'Login :: GHC.Types.TyCon
+78a9ed9dd8d1f3b313ae425bd45ea023
+  $tcLogin :: GHC.Types.TyCon
+3d98e2df0a3e1e2839c8286fc59ae695
+  $trModule :: GHC.Types.Module
+69fa7c528455da72779fdbdc445ebb32
+  data Login
+    = Login {email :: Models.Credentials.Email,
+             password :: Models.Credentials.Password}
+69fa7c528455da72779fdbdc445ebb32
+  axiom Models.Login.Rep_Login::
+      GHC.Generics.Rep Models.Login.Login
+        = GHC.Generics.D1
+            ('GHC.Generics.MetaData
+               "Login"
+               "Models.Login"
+               "api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG"
+               'GHC.Types.False)
+            (GHC.Generics.C1
+               ('GHC.Generics.MetaCons
+                  "Login" 'GHC.Generics.PrefixI 'GHC.Types.True)
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "email")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 Models.Credentials.Email)
+                GHC.Generics.:*: GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "password")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 Models.Credentials.Password)))
+instance GHC.Classes.Eq [Models.Login.Login]
+  = Models.Login.$fEqLogin
+instance Data.Aeson.Types.FromJSON.FromJSON [Models.Login.Login]
+  = Models.Login.$fFromJSONLogin
+instance GHC.Generics.Generic [Models.Login.Login]
+  = Models.Login.$fGenericLogin
+instance GHC.Read.Read [Models.Login.Login]
+  = Models.Login.$fReadLogin
+instance GHC.Show.Show [Models.Login.Login]
+  = Models.Login.$fShowLogin
+family instance GHC.Generics.Rep [Models.Login.Login]
+  = Models.Login.Rep_Login
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

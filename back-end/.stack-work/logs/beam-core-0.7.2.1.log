@@ -1,0 +1,31 @@
+Configuring beam-core-0.7.2.1...
+Preprocessing library for beam-core-0.7.2.1..
+Building library for beam-core-0.7.2.1..
+[ 1 of 26] Compiling Database.Beam.Backend.Types ( Database/Beam/Backend/Types.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Backend/Types.o )
+[ 2 of 26] Compiling Database.Beam.Backend.SQL.Types ( Database/Beam/Backend/SQL/Types.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Backend/SQL/Types.o )
+[ 3 of 26] Compiling Database.Beam.Backend.SQL.SQL92 ( Database/Beam/Backend/SQL/SQL92.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Backend/SQL/SQL92.o )
+[ 4 of 26] Compiling Database.Beam.Backend.SQL.SQL99 ( Database/Beam/Backend/SQL/SQL99.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Backend/SQL/SQL99.o )
+[ 5 of 26] Compiling Database.Beam.Backend.SQL.SQL2003 ( Database/Beam/Backend/SQL/SQL2003.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Backend/SQL/SQL2003.o )
+[ 6 of 26] Compiling Database.Beam.Backend.SQL.AST ( Database/Beam/Backend/SQL/AST.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Backend/SQL/AST.o )
+[ 7 of 26] Compiling Database.Beam.Backend.SQL ( Database/Beam/Backend/SQL.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Backend/SQL.o )
+[ 8 of 26] Compiling Database.Beam.Backend.SQL.Builder ( Database/Beam/Backend/SQL/Builder.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Backend/SQL/Builder.o )
+[ 9 of 26] Compiling Database.Beam.Backend ( Database/Beam/Backend.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Backend.o )
+[10 of 26] Compiling Database.Beam.Backend.URI ( Database/Beam/Backend/URI.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Backend/URI.o )
+[11 of 26] Compiling Database.Beam.Schema.Tables ( Database/Beam/Schema/Tables.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Schema/Tables.o )
+[12 of 26] Compiling Database.Beam.Schema.Lenses ( Database/Beam/Schema/Lenses.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Schema/Lenses.o )
+[13 of 26] Compiling Database.Beam.Schema ( Database/Beam/Schema.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Schema.o )
+[14 of 26] Compiling Database.Beam.Query.Internal ( Database/Beam/Query/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Query/Internal.o )
+[15 of 26] Compiling Database.Beam.Query.SQL92 ( Database/Beam/Query/SQL92.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Query/SQL92.o )
+[16 of 26] Compiling Database.Beam.Query.Types ( Database/Beam/Query/Types.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Query/Types.o )
+[17 of 26] Compiling Database.Beam.Query.Operator ( Database/Beam/Query/Operator.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Query/Operator.o )
+[18 of 26] Compiling Database.Beam.Query.Ord ( Database/Beam/Query/Ord.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Query/Ord.o )
+[19 of 26] Compiling Database.Beam.Query.CustomSQL ( Database/Beam/Query/CustomSQL.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Query/CustomSQL.o )
+[20 of 26] Compiling Database.Beam.Query.Combinators ( Database/Beam/Query/Combinators.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Query/Combinators.o )
+[21 of 26] Compiling Database.Beam.Query.Relationships ( Database/Beam/Query/Relationships.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Query/Relationships.o )
+[22 of 26] Compiling Database.Beam.Query.Aggregate ( Database/Beam/Query/Aggregate.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Query/Aggregate.o )
+[23 of 26] Compiling Database.Beam.Query.Extensions ( Database/Beam/Query/Extensions.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Query/Extensions.o )
+[24 of 26] Compiling Database.Beam.Query ( Database/Beam/Query.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Query.o )
+[25 of 26] Compiling Database.Beam.Backend.SQL.BeamExtensions ( Database/Beam/Backend/SQL/BeamExtensions.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam/Backend/SQL/BeamExtensions.o )
+[26 of 26] Compiling Database.Beam    ( Database/Beam.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Database/Beam.o )
+Installing library in /Users/stevenmaccoun/projects/smaccoun-homepage/back-end/.stack-work/install/x86_64-osx/lts-11.2/8.2.2/lib/x86_64-osx-ghc-8.2.2/beam-core-0.7.2.1-F1f57IiFPo2Co00Np5qSAF
+Registering library for beam-core-0.7.2.1..

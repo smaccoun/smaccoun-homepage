@@ -1,0 +1,592 @@
+
+==================== FINAL INTERFACE ====================
+2018-06-01 20:39:32.749449 UTC
+
+interface api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Database.Crud 8022
+  interface hash: 197f6b87eefec75ebeb9c5bb32642bc6
+  ABI hash: dd92125455e34e65912024015d8232dc
+  export-list hash: 28b054e8186fd03404433af7cb14118d
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: f25f94dce56572307f9ae8b6901fb829
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Database.Crud.createEntity
+  Database.Crud.crudEntityServer
+  Database.Crud.cudEntityServer
+  Database.Crud.deleteByID
+  Database.Crud.getEntities
+  Database.Crud.getEntity
+  Database.Crud.queryTableCount
+  Database.Crud.rEntityServer
+  Database.Crud.updateByID
+  Database.Crud.CUDEntityAPI
+  Database.Crud.CrudEntityAPI
+  Database.Crud.REntityAPI
+module dependencies: Api.Resource AppPrelude Config.AppConfig
+                     Config.DBConfig Database.MasterEntity Database.Schema
+                     Database.Tables.BlogPost Database.Tables.User Database.Transaction
+                     Init Models.Credentials Pagination
+package dependencies: QuickCheck-2.10.1 StateVar-1.1.0.4
+                      adjunctions-4.4 aeson-1.2.4.0 ansi-terminal-0.8.0.2 array-0.5.2.0
+                      asn1-encoding-0.9.5 asn1-parse-0.9.4 asn1-types-0.3.2 async-2.1.1.1
+                      attoparsec-0.13.2.2 attoparsec-iso8601-1.0.0.0 auto-update-0.1.4
+                      base-4.10.1.0 base-compat-0.9.3 base-orphans-0.7
+                      base-unicode-symbols-0.2.2.4 base64-bytestring-1.0.0.1
+                      basement-0.0.7 beam-core-0.7.2.1 beam-migrate-0.3.2.0
+                      beam-postgres-0.3.2.1 bifunctors-5.5.2 binary-0.8.5.1
+                      blaze-builder-0.4.1.0 blaze-html-0.9.0.1 blaze-markup-0.8.2.0
+                      byteorder-1.0.4 bytestring-0.10.8.2 call-stack-0.1.0
+                      case-insensitive-1.2.0.11 colour-2.3.4 comonad-5.0.3
+                      concise-0.1.0.1 containers-0.5.10.2 contravariant-1.4.1
+                      cpphs-1.20.8 cryptohash-0.11.9 cryptonite-0.25 data-default-0.7.1.1
+                      data-default-class-0.1.2.0 data-default-instances-containers-0.0.1
+                      data-default-instances-dlist-0.0.1
+                      data-default-instances-old-locale-0.0.1 deepseq-1.4.3.0
+                      dependent-map-0.2.4.0 dependent-sum-0.4 directory-1.3.0.2
+                      distributive-0.5.3 dlist-0.8.0.4 easy-file-0.2.1 entropy-0.3.8
+                      exceptions-0.8.3 fast-logger-2.4.11 file-embed-0.0.10.1
+                      filepath-1.4.1.2 finite-typelits-0.1.3.0 free-4.12.4
+                      ghc-boot-th-8.2.2 ghc-prim-0.5.1.1 hashable-1.2.7.0
+                      haskell-src-exts-1.19.1 hourglass-0.2.11 http-api-data-0.3.7.2
+                      http-date-0.0.6.1 http-media-0.7.1.2 http-types-0.12.1
+                      integer-gmp-1.0.1.0 integer-logarithms-1.0.2.1 jose-0.6.0.3
+                      kan-extensions-5.1 lens-4.16.1 lifted-base-0.2.3.12 memory-0.14.16
+                      microlens-0.4.8.3 mime-types-0.1.0.7 mmorph-1.1.2
+                      monad-control-1.0.2.3 mtl-2.2.2 network-2.6.3.4 network-uri-2.6.1.0
+                      old-locale-1.0.0.7 old-time-1.1.0.3 parallel-3.2.1.1
+                      parsec-3.1.13.0 postgresql-libpq-0.9.4.1 postgresql-simple-0.5.3.0
+                      postgresql-simple-migration-0.1.11.0 pqueue-1.3.2.3
+                      prelude-extras-0.4.0.3 pretty-1.1.3.3 primitive-0.6.3.0
+                      profunctors-5.2.2 protolude-0.2.1 quickcheck-instances-0.3.18
+                      random-1.1 reflection-2.1.3 regex-base-0.93.2 regex-compat-0.95.1
+                      regex-posix-0.95.2 resource-pool-0.2.3.2 resourcet-1.1.11
+                      safe-0.3.17 scientific-0.3.5.3 scrypt-0.5.0 semigroupoids-5.2.2
+                      servant-0.13 servant-server-0.13 singleton-bool-0.1.4 stm-2.4.5.0
+                      string-conversions-0.4.0.1 stringsearch-0.3.6.6 tagged-0.8.5
+                      template-haskell-2.12.0.0 text-1.2.3.0 tf-random-0.5
+                      th-abstraction-0.2.6.0 th-lift-0.7.8 th-lift-instances-0.1.11
+                      time-1.8.0.2 time-locale-compat-0.1.1.3 transformers-0.5.2.0
+                      transformers-base-0.4.4 transformers-compat-0.5.1.4 unix-2.7.2.2
+                      unix-compat-0.5.0.1 unix-time-0.3.8 unliftio-core-0.1.1.0
+                      unordered-containers-0.2.9.0 uri-bytestring-0.3.1.1
+                      utf8-string-1.0.1.1 uuid-1.3.13 uuid-types-1.0.3 vault-0.3.1.0
+                      vector-0.12.0.1 vector-sized-0.6.1.0 wai-3.2.1.2
+                      wai-app-static-3.1.6.2 wai-cors-0.2.6 wai-extra-3.0.22.0
+                      wai-logger-2.3.2 word8-0.1.3 x509-1.7.3 zlib-0.6.2
+orphans: api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Database.Tables.User
+         regex-posix-0.95.2:Text.Regex.Posix.String
+         regex-posix-0.95.2:Text.Regex.Posix.Sequence
+         regex-posix-0.95.2:Text.Regex.Posix.ByteString.Lazy
+         regex-posix-0.95.2:Text.Regex.Posix.ByteString
+         regex-base-0.93.2:Text.Regex.Base.Context
+         beam-postgres-0.3.2.1:Database.Beam.Postgres.Migrate
+         beam-postgres-0.3.2.1:Database.Beam.Postgres.Connection
+         beam-postgres-0.3.2.1:Database.Beam.Postgres.PgSpecific
+         beam-migrate-0.3.2.0:Database.Beam.Haskell.Syntax
+         haskell-src-exts-1.19.1:Language.Haskell.Exts.Parser
+         beam-postgres-0.3.2.1:Database.Beam.Postgres.Types
+         pqueue-1.3.2.3:Data.PQueue.Min
+         beam-migrate-0.3.2.0:Database.Beam.Migrate.SQL.Builder
+         dependent-map-0.2.4.0:Data.Dependent.Map
+         dependent-sum-0.4:Data.GADT.Compare jose-0.6.0.3:Crypto.JOSE.Error
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Array
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.ByteString
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.CaseInsensitive
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Containers
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Hashable
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.OldTime
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Natural
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Scientific
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Semigroup
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Tagged
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Text
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Time
+         time-1.8.0.2:Data.Time.Clock.TAI
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Transformer
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.UUID
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.UnorderedContainers
+         quickcheck-instances-0.3.18:Test.QuickCheck.Instances.Vector
+         jose-0.6.0.3:Crypto.JOSE.Types.Orphans
+         reflection-2.1.3:Data.Reflection
+         data-default-instances-containers-0.0.1:Data.Default.Instances.Containers
+         data-default-instances-dlist-0.0.1:Data.Default.Instances.DList
+         data-default-instances-old-locale-0.0.1:Data.Default.Instances.OldLocale
+         colour-2.3.4:Data.Colour unix-time-0.3.8:Data.UnixTime.Diff
+         beam-core-0.7.2.1:Database.Beam.Backend.Types
+         base-orphans-0.7:Data.Orphans
+         attoparsec-0.13.2.2:Data.Attoparsec.ByteString.Char8
+         th-lift-instances-0.1.11:Instances.TH.Lift
+         th-lift-0.7.8:Language.Haskell.TH.Lift
+         vector-0.12.0.1:Data.Vector.Unboxed
+         vector-0.12.0.1:Data.Vector.Fusion.Bundle
+         attoparsec-0.13.2.2:Data.Attoparsec.Text.Internal
+         transformers-0.5.2.0:Control.Monad.Trans.Error
+         stm-2.4.5.0:Control.Monad.STM time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         hashable-1.2.7.0:Data.Hashable.Generic
+         network-2.6.3.4:Network.Socket text-1.2.3.0:Data.Text.Lazy
+         basement-0.0.7:Basement.UArray.Base basement-0.0.7:Basement.Block
+         text-1.2.3.0:Data.Text binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.0:Data.Text.Show base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: adjunctions-4.4:Data.Functor.Rep
+                         aeson-1.2.4.0:Data.Aeson.Types.Internal
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Database.MasterEntity
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Database.Schema
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Database.Tables.BlogPost
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Database.Tables.User
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Models.Credentials
+                         api-0.1.0.0-JXjIDZgbZwIJ0APHrPu5UG:Pagination
+                         attoparsec-0.13.2.2:Data.Attoparsec.Internal.Types
+                         base-4.10.1.0:Control.Applicative base-4.10.1.0:Data.Complex
+                         base-4.10.1.0:Data.Either base-4.10.1.0:Data.Functor.Compose
+                         base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats basement-0.0.7:Basement.Block.Base
+                         basement-0.0.7:Basement.Monad
+                         basement-0.0.7:Basement.MutableBuilder basement-0.0.7:Basement.Nat
+                         basement-0.0.7:Basement.NonEmpty
+                         basement-0.0.7:Basement.Numerical.Subtractive
+                         basement-0.0.7:Basement.PrimType basement-0.0.7:Basement.String
+                         basement-0.0.7:Basement.String.Encoding.ASCII7
+                         basement-0.0.7:Basement.String.Encoding.ISO_8859_1
+                         basement-0.0.7:Basement.String.Encoding.UTF16
+                         basement-0.0.7:Basement.String.Encoding.UTF32
+                         basement-0.0.7:Basement.Types.OffsetSize
+                         basement-0.0.7:Basement.UArray.Base
+                         basement-0.0.7:Basement.UTF8.Base
+                         beam-core-0.7.2.1:Database.Beam.Backend.SQL.AST
+                         beam-core-0.7.2.1:Database.Beam.Backend.SQL.Builder
+                         beam-core-0.7.2.1:Database.Beam.Backend.Types
+                         beam-core-0.7.2.1:Database.Beam.Query.Combinators
+                         beam-core-0.7.2.1:Database.Beam.Query.CustomSQL
+                         beam-core-0.7.2.1:Database.Beam.Query.Internal
+                         beam-core-0.7.2.1:Database.Beam.Query.Types
+                         beam-core-0.7.2.1:Database.Beam.Schema.Tables
+                         beam-migrate-0.3.2.0:Database.Beam.Haskell.Syntax
+                         beam-migrate-0.3.2.0:Database.Beam.Migrate.Actions
+                         beam-migrate-0.3.2.0:Database.Beam.Migrate.Checks
+                         beam-migrate-0.3.2.0:Database.Beam.Migrate.SQL.Builder
+                         beam-migrate-0.3.2.0:Database.Beam.Migrate.Serialization
+                         beam-migrate-0.3.2.0:Database.Beam.Migrate.Types.CheckedEntities
+                         beam-migrate-0.3.2.0:Database.Beam.Migrate.Types.Predicates
+                         beam-postgres-0.3.2.1:Database.Beam.Postgres.Extensions
+                         beam-postgres-0.3.2.1:Database.Beam.Postgres.PgSpecific
+                         beam-postgres-0.3.2.1:Database.Beam.Postgres.Syntax
+                         beam-postgres-0.3.2.1:Database.Beam.Postgres.Types
+                         bifunctors-5.5.2:Data.Bifunctor.Biff
+                         bifunctors-5.5.2:Data.Bifunctor.Clown
+                         bifunctors-5.5.2:Data.Bifunctor.Fix
+                         bifunctors-5.5.2:Data.Bifunctor.Flip
+                         bifunctors-5.5.2:Data.Bifunctor.Join
+                         bifunctors-5.5.2:Data.Bifunctor.Joker
+                         bifunctors-5.5.2:Data.Bifunctor.Product
+                         bifunctors-5.5.2:Data.Bifunctor.Sum
+                         bifunctors-5.5.2:Data.Bifunctor.Tannen
+                         bifunctors-5.5.2:Data.Bifunctor.Wrapped
+                         containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal containers-0.5.10.2:Data.Tree
+                         cryptonite-0.25:Crypto.Error.Types
+                         cryptonite-0.25:Crypto.Hash.Blake2
+                         cryptonite-0.25:Crypto.Hash.Blake2b
+                         cryptonite-0.25:Crypto.Hash.Blake2bp
+                         cryptonite-0.25:Crypto.Hash.Blake2s
+                         cryptonite-0.25:Crypto.Hash.Blake2sp
+                         cryptonite-0.25:Crypto.Hash.Keccak cryptonite-0.25:Crypto.Hash.MD2
+                         cryptonite-0.25:Crypto.Hash.MD4 cryptonite-0.25:Crypto.Hash.MD5
+                         cryptonite-0.25:Crypto.Hash.RIPEMD160
+                         cryptonite-0.25:Crypto.Hash.SHA1 cryptonite-0.25:Crypto.Hash.SHA224
+                         cryptonite-0.25:Crypto.Hash.SHA256 cryptonite-0.25:Crypto.Hash.SHA3
+                         cryptonite-0.25:Crypto.Hash.SHA384
+                         cryptonite-0.25:Crypto.Hash.SHA512
+                         cryptonite-0.25:Crypto.Hash.SHA512t
+                         cryptonite-0.25:Crypto.Hash.SHAKE
+                         cryptonite-0.25:Crypto.Hash.Skein256
+                         cryptonite-0.25:Crypto.Hash.Skein512
+                         cryptonite-0.25:Crypto.Hash.Tiger
+                         cryptonite-0.25:Crypto.Hash.Whirlpool dlist-0.8.0.4:Data.DList
+                         finite-typelits-0.1.3.0:Data.Finite.Internal
+                         ghc-boot-th-8.2.2:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.2.2:GHC.LanguageExtensions.Type
+                         haskell-src-exts-1.19.1:Language.Haskell.Exts.SrcLoc
+                         haskell-src-exts-1.19.1:Language.Haskell.Exts.Syntax
+                         http-api-data-0.3.7.2:Web.Internal.FormUrlEncoded
+                         kan-extensions-5.1:Data.Functor.Day
+                         kan-extensions-5.1:Data.Functor.Yoneda lens-4.16.1:Control.Lens.At
+                         lens-4.16.1:Control.Lens.Internal.Indexed
+                         lens-4.16.1:Control.Lens.Reified lens-4.16.1:Control.Lens.Tuple
+                         lens-4.16.1:Control.Lens.Wrapped lens-4.16.1:Control.Lens.Zoom
+                         microlens-0.4.8.3:Lens.Micro.Internal
+                         monad-control-1.0.2.3:Control.Monad.Trans.Control
+                         network-uri-2.6.1.0:Network.URI
+                         pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.3.0:Control.Monad.Primitive
+                         primitive-0.6.3.0:Data.Primitive.Array
+                         primitive-0.6.3.0:Data.Primitive.ByteArray
+                         profunctors-5.2.2:Data.Profunctor.Composition
+                         profunctors-5.2.2:Data.Profunctor.Rep
+                         resourcet-1.1.11:Control.Monad.Trans.Resource.Internal
+                         servant-0.13:Servant.API.ContentTypes
+                         servant-0.13:Servant.API.IsSecure servant-0.13:Servant.API.Stream
+                         servant-0.13:Servant.API.Verbs servant-0.13:Servant.Utils.Links
+                         servant-server-0.13:Servant.Server.Internal
+                         servant-server-0.13:Servant.Server.Internal.BasicAuth
+                         servant-server-0.13:Servant.Server.Internal.Handler
+                         servant-server-0.13:Servant.Server.Internal.RoutingApplication
+                         tagged-0.8.5:Data.Tagged
+                         template-haskell-2.12.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.3.0:Data.Text text-1.2.3.0:Data.Text.Lazy
+                         th-abstraction-0.2.6.0:Language.Haskell.TH.Datatype
+                         unordered-containers-0.2.9.0:Data.HashMap.Base
+                         unordered-containers-0.2.9.0:Data.HashSet
+                         uri-bytestring-0.3.1.1:URI.ByteString.Types
+                         uuid-types-1.0.3:Data.UUID.Types.Internal
+                         uuid-types-1.0.3:Data.UUID.Types.Internal.Builder
+                         vector-0.12.0.1:Data.Vector vector-0.12.0.1:Data.Vector.Primitive
+                         vector-0.12.0.1:Data.Vector.Storable
+                         vector-0.12.0.1:Data.Vector.Unboxed
+                         vector-0.12.0.1:Data.Vector.Unboxed.Base
+                         vector-sized-0.6.1.0:Data.Vector.Generic.Sized
+                         zlib-0.6.2:Codec.Compression.Zlib.Stream
+import  -/  Api.Resource 352a93b75b7fe77f1cffdadf233322dd
+  exports: 7f256a73c83c32c916c94f68e71e0144
+  CRUDResourceAPI bfd0c0d5f86c435c9769238926f09412
+  CUDResourceAPI ef66c51b65c20bcc19b05072ba01a4f8
+  RResourceAPI c2321545e2323fadd5d8c849f67a115f
+  crudResourceServer ae54946995ec95caa290a8eb13fdaa5b
+  cudResourceServer 9d5212345175ec59805f8b558951dc2a
+  rResourceServer cc26a01c81e903f5625951c0268cd2f4
+import  -/  AppPrelude 8b403b19a73477bf6ded351e8350cfb7
+  exports: 833a269d86971bb6039e3484bfdc1a18
+import  -/  Config.AppConfig 7d576d23810cd1b65f88216a83976ec5
+  exports: 46bae506e8b4afb88a7919aba70a4ed4
+  HasDBConn 1cc19a966e69485c50bfac00153c4b12
+import  -/  Database.MasterEntity b1a2d4b24895229e053ed42d9c8dc9a1
+  exports: f1d85d73fc437a442b6c478d886c31af
+  AppEntity 0c31f07202a6c4f6a0f3b93269630212
+  AppEntity 207352dddc77c697348836ee95993208
+  appId 44ec75dda5379330d4f7238395a9ec50
+  baseTable a296dec9f6eca6b15d567cc686449c7e
+  updated_at d65b333ccb77af57e1337d81359a38cb
+import  -/  Database.Schema 6d89968795987c081a9eae97a6c2269c
+  exports: 0c2eb79fbc35a81e8c939de95d90074c
+  MyAppDb 1fa335eb585ba778b67af9928dbecf4b
+import  -/  Database.Transaction 2a0bf53c3292a9445cef9e2aa4f5c6a6
+  exports: ea539f72cd88327737ac16adea0b5cb1
+  runInsertM ff081995c1e9c26f2e6b71a252e5656c
+  runQueryM 78ffcd2a4f06b79308ee2a9d7f9bd3a0
+  runQuerySingle a93e8ca06bcfe2192dcb3d95aa7d35ac
+  runSqlM 289c818ec84f71bbb87bb83e34e0a714
+import  -/  Pagination a39048c087d3d19765bf66cfa85fcae1
+  exports: e4702c4b92583cf98adbb9ae5ea6d1e8
+  $sel:__data:PaginatedResult debb3e5db67b2afecae9b4f7266a179d
+  $sel:__pagination:PaginatedResult debb3e5db67b2afecae9b4f7266a179d
+  Limit c0a423276cad52cee306d103f110ecd8
+  Offset c081f8eadf4ad312a0ef19f936b4cdf1
+  Order fb3f9b5024f62f197a9fc6b784ef382c
+  PaginatedResult 15aedea5f792e046a494d91ba9e1ab66
+  PaginatedResult debb3e5db67b2afecae9b4f7266a179d
+  TotalCount a94102a8e024398165195d022735223a
+  getPaginationContext 58f5034434019f3f82b8b536caaa3fb1
+  paginateQuery f258f7bd87e846b9229fdad302ba8b49
+  paramsToPagination 1bd854dee330e1724a086e806464f17b
+import  -/  base-4.10.1.0:Control.Monad.IO.Class 9d78cd0f73a837f3c00753bd212b9f2c
+import  -/  base-4.10.1.0:Data.Functor.Identity aae7a3124ea5423ea52291a312b43abe
+import  -/  base-4.10.1.0:Data.Typeable.Internal b31684019ac02e3213b270a8482ac844
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.Generics c2a8006cab1f0055555a6c72607a574b
+import  -/  beam-core-0.7.2.1:Database.Beam 35fd6826a8eadad243d13d0152a13f87
+import  -/  beam-core-0.7.2.1:Database.Beam.Backend.SQL.SQL92 c3858538a689f526f7a277e368eff083
+import  -/  beam-core-0.7.2.1:Database.Beam.Backend.Types f37ba0b91a7de6ff203548b65df0adc0
+import  -/  beam-core-0.7.2.1:Database.Beam.Query cd2c7f15de34518597a3a68b09d2ea17
+import  -/  beam-core-0.7.2.1:Database.Beam.Query.Aggregate 3cfa9f57d3c6d028f1ff7605b8c24220
+import  -/  beam-core-0.7.2.1:Database.Beam.Query.Combinators 85b539e30cedee4482681621c4bac663
+import  -/  beam-core-0.7.2.1:Database.Beam.Query.Ord d9b65942d38b2372a4bb21dd659065b3
+import  -/  beam-core-0.7.2.1:Database.Beam.Schema.Tables 05807973f142cbe0c80293f956245dbc
+import  -/  beam-postgres-0.3.2.1:Database.Beam.Postgres 2b38d9be529c79f300829d63a584e51e
+import  -/  beam-postgres-0.3.2.1:Database.Beam.Postgres.Syntax e339f1589ff4e02ee58b7491f69b19eb
+import  -/  beam-postgres-0.3.2.1:Database.Beam.Postgres.Types eeecb9033c96f7babca69407b9888d26
+import  -/  lens-4.16.1:Control.Lens b059236cf12a31b766c6d83fadcf9b94
+import  -/  lens-4.16.1:Control.Lens.Getter 15aec3abfcb276acdf90548453e568d9
+import  -/  mtl-2.2.2:Control.Monad.Reader.Class 6d33756d93a5919f9374afec232249f4
+import  -/  protolude-0.2.1:Protolude.Panic 989d6520a174c020e1946a82cd3ecec7
+import  -/  servant-server-0.13:Servant 01fcafd92e3ac5f093a1cea34d2b3446
+import  -/  servant-server-0.13:Servant.Server.Internal 1f44df347b2dd81f7d589ea301553fd4
+import  -/  time-1.8.0.2:Data.Time.Clock 0be19986496eb539759244fa723c728c
+import  -/  time-1.8.0.2:Data.Time.Clock.POSIX 9bbc4ffee03d887b4be58f486cb9ae4c
+import  -/  uuid-1.3.13:Data.UUID 9dd9964dd06b99da446fcd0318531d8a
+import  -/  uuid-types-1.0.3:Data.UUID.Types.Internal 96892a6df3f6e25ffcf1993a410236b6
+2d2a62808f9cc7f1cfdee541ab502039
+  $trModule :: GHC.Types.Module
+c1eae1b5f5b0f80aebb9bb0132b6bb6e
+  type CUDEntityAPI (resourceName :: GHC.Types.Symbol)
+                    masterEntity
+                    baseEntity =
+    Api.Resource.CUDResourceAPI
+      resourceName masterEntity baseEntity Data.UUID.Types.Internal.UUID
+f84f291b5207694669d9f121a294174f
+  type CrudEntityAPI (resourceName :: GHC.Types.Symbol)
+                     a
+                     baseEntity =
+    Api.Resource.CRUDResourceAPI
+      resourceName
+      Pagination.PaginatedResult
+      a
+      Data.UUID.Types.Internal.UUID
+      baseEntity
+0a7fbc4cbcc27a6563258ea5feacce4f
+  type REntityAPI (resourceName :: GHC.Types.Symbol) masterEntity =
+    Api.Resource.RResourceAPI
+      resourceName
+      Pagination.PaginatedResult
+      masterEntity
+      Data.UUID.Types.Internal.UUID
+515c8764c47dc102b2676e5a7ba0fa48
+  createEntity ::
+    (Database.Beam.Schema.Tables.GFieldsFulfillConstraint
+       (Database.Beam.Backend.SQL.SQL92.HasSqlValueSyntax
+          Database.Beam.Postgres.Syntax.PgValueSyntax)
+       (GHC.Generics.Rep (table Database.Beam.Backend.Types.Exposed))
+       (GHC.Generics.Rep (table Data.Functor.Identity.Identity))
+       (GHC.Generics.Rep
+          (table (Database.Beam.Schema.Tables.WithConstraint
+                    (Database.Beam.Backend.SQL.SQL92.HasSqlValueSyntax
+                       Database.Beam.Postgres.Syntax.PgValueSyntax)))),
+     GHC.Generics.Generic (table Database.Beam.Backend.Types.Exposed),
+     GHC.Generics.Generic (table Data.Functor.Identity.Identity),
+     GHC.Generics.Generic
+       (table (Database.Beam.Schema.Tables.WithConstraint
+                 (Database.Beam.Backend.SQL.SQL92.HasSqlValueSyntax
+                    Database.Beam.Postgres.Syntax.PgValueSyntax))),
+     Database.Beam.Schema.Tables.Beamable table,
+     Control.Monad.Reader.Class.MonadReader r m,
+     Config.AppConfig.HasDBConn r,
+     Database.Beam.Backend.Types.GFromBackendRow
+       Database.Beam.Postgres.Types.Postgres
+       (GHC.Generics.Rep (table Database.Beam.Backend.Types.Exposed))
+       (GHC.Generics.Rep (table Data.Functor.Identity.Identity)),
+     Control.Monad.IO.Class.MonadIO m) =>
+    Database.Beam.Schema.Tables.DatabaseEntity
+      Database.Beam.Postgres.Types.Postgres
+      db
+      (Database.Beam.Schema.Tables.TableEntity
+         (Database.MasterEntity.AppEntity table))
+    -> table Data.Functor.Identity.Identity
+    -> m (Database.MasterEntity.AppEntity
+            table Data.Functor.Identity.Identity)
+2b0f652b4ebc5655b179ef4f67fd5591
+  crudEntityServer ::
+    (Config.AppConfig.HasDBConn r,
+     GHC.Generics.Generic (table Data.Functor.Identity.Identity),
+     GHC.Generics.Generic (table Database.Beam.Backend.Types.Exposed),
+     GHC.Generics.Generic
+       (table (Database.Beam.Schema.Tables.WithConstraint
+                 (Database.Beam.Backend.SQL.SQL92.HasSqlValueSyntax
+                    Database.Beam.Postgres.Syntax.PgValueSyntax))),
+     Database.Beam.Schema.Tables.GFieldsFulfillConstraint
+       (Database.Beam.Backend.SQL.SQL92.HasSqlValueSyntax
+          Database.Beam.Postgres.Syntax.PgValueSyntax)
+       (GHC.Generics.Rep (table Database.Beam.Backend.Types.Exposed))
+       (GHC.Generics.Rep (table Data.Functor.Identity.Identity))
+       (GHC.Generics.Rep
+          (table (Database.Beam.Schema.Tables.WithConstraint
+                    (Database.Beam.Backend.SQL.SQL92.HasSqlValueSyntax
+                       Database.Beam.Postgres.Syntax.PgValueSyntax)))),
+     Database.Beam.Schema.Tables.Beamable table,
+     Data.Typeable.Internal.Typeable table,
+     Database.Beam.Backend.Types.GFromBackendRow
+       Database.Beam.Postgres.Types.Postgres
+       (GHC.Generics.Rep (table Database.Beam.Backend.Types.Exposed))
+       (GHC.Generics.Rep (table Data.Functor.Identity.Identity)),
+     Control.Monad.IO.Class.MonadIO m,
+     Control.Monad.Reader.Class.MonadReader r m) =>
+    Database.Beam.Schema.Tables.DatabaseEntity
+      Database.Beam.Postgres.Types.Postgres
+      Database.Schema.MyAppDb
+      (Database.Beam.Schema.Tables.TableEntity
+         (Database.MasterEntity.AppEntity table))
+    -> Servant.Server.Internal.ServerT
+         (Api.Resource.CRUDResourceAPI
+            name
+            Pagination.PaginatedResult
+            (Database.MasterEntity.AppEntity
+               table Data.Functor.Identity.Identity)
+            Data.UUID.Types.Internal.UUID
+            (table Data.Functor.Identity.Identity))
+         m
+bb16dfe9e4c65ff3d6776d6d2058d710
+  cudEntityServer ::
+    (Config.AppConfig.HasDBConn r, Control.Monad.IO.Class.MonadIO m,
+     Database.Beam.Backend.Types.GFromBackendRow
+       Database.Beam.Postgres.Types.Postgres
+       (GHC.Generics.Rep (table Database.Beam.Backend.Types.Exposed))
+       (GHC.Generics.Rep (table Data.Functor.Identity.Identity)),
+     Database.Beam.Schema.Tables.Beamable table,
+     GHC.Generics.Generic (table Data.Functor.Identity.Identity),
+     GHC.Generics.Generic (table Database.Beam.Backend.Types.Exposed),
+     GHC.Generics.Generic
+       (table (Database.Beam.Schema.Tables.WithConstraint
+                 (Database.Beam.Backend.SQL.SQL92.HasSqlValueSyntax
+                    Database.Beam.Postgres.Syntax.PgValueSyntax))),
+     Database.Beam.Schema.Tables.GFieldsFulfillConstraint
+       (Database.Beam.Backend.SQL.SQL92.HasSqlValueSyntax
+          Database.Beam.Postgres.Syntax.PgValueSyntax)
+       (GHC.Generics.Rep (table Database.Beam.Backend.Types.Exposed))
+       (GHC.Generics.Rep (table Data.Functor.Identity.Identity))
+       (GHC.Generics.Rep
+          (table (Database.Beam.Schema.Tables.WithConstraint
+                    (Database.Beam.Backend.SQL.SQL92.HasSqlValueSyntax
+                       Database.Beam.Postgres.Syntax.PgValueSyntax)))),
+     Control.Monad.Reader.Class.MonadReader r m) =>
+    Database.Beam.Schema.Tables.DatabaseEntity
+      Database.Beam.Postgres.Types.Postgres
+      db
+      (Database.Beam.Schema.Tables.TableEntity
+         (Database.MasterEntity.AppEntity table))
+    -> Servant.Server.Internal.ServerT
+         (Database.Crud.CUDEntityAPI
+            name
+            (Database.MasterEntity.AppEntity
+               table Data.Functor.Identity.Identity)
+            (table Data.Functor.Identity.Identity))
+         m
+a99d63eaf9439dfacb16028cf61187ff
+  deleteByID ::
+    (Control.Monad.IO.Class.MonadIO m,
+     Control.Monad.Reader.Class.MonadReader r m,
+     Config.AppConfig.HasDBConn r) =>
+    Database.Beam.Schema.Tables.DatabaseEntity
+      be
+      db
+      (Database.Beam.Schema.Tables.TableEntity
+         (Database.MasterEntity.AppEntity table))
+    -> Data.UUID.Types.Internal.UUID -> m ()
+7fd40a11189efeaf53b7b0f3e15e378a
+  getEntities ::
+    (Database.Beam.Schema.Tables.Beamable inner,
+     Data.Typeable.Internal.Typeable inner,
+     GHC.Generics.Generic (inner Data.Functor.Identity.Identity),
+     GHC.Generics.Generic (inner Database.Beam.Backend.Types.Exposed),
+     Database.Beam.Backend.Types.GFromBackendRow
+       Database.Beam.Postgres.Types.Postgres
+       (GHC.Generics.Rep (inner Database.Beam.Backend.Types.Exposed))
+       (GHC.Generics.Rep (inner Data.Functor.Identity.Identity)),
+     Control.Monad.Reader.Class.MonadReader r m,
+     Config.AppConfig.HasDBConn r, Control.Monad.IO.Class.MonadIO m) =>
+    Database.Beam.Schema.Tables.DatabaseEntity
+      Database.Beam.Postgres.Types.Postgres
+      Database.Schema.MyAppDb
+      (Database.Beam.Schema.Tables.TableEntity
+         (Database.MasterEntity.AppEntity inner))
+    -> GHC.Base.Maybe Pagination.Limit
+    -> GHC.Base.Maybe Pagination.Offset
+    -> GHC.Base.Maybe Pagination.Order
+    -> m (Pagination.PaginatedResult
+            (Database.MasterEntity.AppEntity
+               inner Data.Functor.Identity.Identity))
+760bd3d96285c10f16e6c752875155e7
+  getEntity ::
+    (Database.Beam.Schema.Tables.Beamable inner,
+     Data.Typeable.Internal.Typeable inner,
+     GHC.Generics.Generic (inner Data.Functor.Identity.Identity),
+     GHC.Generics.Generic (inner Database.Beam.Backend.Types.Exposed),
+     Database.Beam.Backend.Types.GFromBackendRow
+       Database.Beam.Postgres.Types.Postgres
+       (GHC.Generics.Rep (inner Database.Beam.Backend.Types.Exposed))
+       (GHC.Generics.Rep (inner Data.Functor.Identity.Identity)),
+     Control.Monad.Reader.Class.MonadReader r m,
+     Config.AppConfig.HasDBConn r, Control.Monad.IO.Class.MonadIO m) =>
+    Database.Beam.Schema.Tables.DatabaseEntity
+      Database.Beam.Postgres.Types.Postgres
+      Database.Schema.MyAppDb
+      (Database.Beam.Schema.Tables.TableEntity
+         (Database.MasterEntity.AppEntity inner))
+    -> Data.UUID.Types.Internal.UUID
+    -> m (Database.MasterEntity.AppEntity
+            inner Data.Functor.Identity.Identity)
+c18ce67893e501f6603fef22a7f8930d
+  queryTableCount ::
+    (Config.AppConfig.HasDBConn r,
+     Control.Monad.Reader.Class.MonadReader r m,
+     Control.Monad.IO.Class.MonadIO m,
+     Database.Beam.Schema.Tables.Table table,
+     Database.Beam.Schema.Tables.Database be db) =>
+    Database.Beam.Schema.Tables.DatabaseEntity
+      be db (Database.Beam.Schema.Tables.TableEntity table)
+    -> m GHC.Types.Int
+685d3582d16e9751df3b0f958e24af9e
+  rEntityServer ::
+    (Config.AppConfig.HasDBConn r,
+     Database.Beam.Schema.Tables.Beamable inner,
+     Data.Typeable.Internal.Typeable inner,
+     GHC.Generics.Generic (inner Data.Functor.Identity.Identity),
+     GHC.Generics.Generic (inner Database.Beam.Backend.Types.Exposed),
+     Database.Beam.Backend.Types.GFromBackendRow
+       Database.Beam.Postgres.Types.Postgres
+       (GHC.Generics.Rep (inner Database.Beam.Backend.Types.Exposed))
+       (GHC.Generics.Rep (inner Data.Functor.Identity.Identity)),
+     Control.Monad.IO.Class.MonadIO m,
+     Control.Monad.Reader.Class.MonadReader r m) =>
+    Database.Beam.Schema.Tables.DatabaseEntity
+      Database.Beam.Postgres.Types.Postgres
+      Database.Schema.MyAppDb
+      (Database.Beam.Schema.Tables.TableEntity
+         (Database.MasterEntity.AppEntity inner))
+    -> Servant.Server.Internal.ServerT
+         (Database.Crud.REntityAPI
+            name
+            (Database.MasterEntity.AppEntity
+               inner Data.Functor.Identity.Identity))
+         m
+1a8525154a4ca93b5bccf320a0ac3015
+  updateByID ::
+    (Database.Beam.Schema.Tables.GFieldsFulfillConstraint
+       (Database.Beam.Backend.SQL.SQL92.HasSqlValueSyntax
+          Database.Beam.Postgres.Syntax.PgValueSyntax)
+       (GHC.Generics.Rep (table Database.Beam.Backend.Types.Exposed))
+       (GHC.Generics.Rep (table Data.Functor.Identity.Identity))
+       (GHC.Generics.Rep
+          (table (Database.Beam.Schema.Tables.WithConstraint
+                    (Database.Beam.Backend.SQL.SQL92.HasSqlValueSyntax
+                       Database.Beam.Postgres.Syntax.PgValueSyntax)))),
+     GHC.Generics.Generic (table Database.Beam.Backend.Types.Exposed),
+     GHC.Generics.Generic (table Data.Functor.Identity.Identity),
+     GHC.Generics.Generic
+       (table (Database.Beam.Schema.Tables.WithConstraint
+                 (Database.Beam.Backend.SQL.SQL92.HasSqlValueSyntax
+                    Database.Beam.Postgres.Syntax.PgValueSyntax))),
+     Database.Beam.Schema.Tables.Beamable table,
+     Control.Monad.IO.Class.MonadIO m,
+     Control.Monad.Reader.Class.MonadReader r m,
+     Config.AppConfig.HasDBConn r) =>
+    Database.Beam.Schema.Tables.DatabaseEntity
+      be
+      db
+      (Database.Beam.Schema.Tables.TableEntity
+         (Database.MasterEntity.AppEntity table))
+    -> Data.UUID.Types.Internal.UUID
+    -> table Data.Functor.Identity.Identity
+    -> m ()
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
