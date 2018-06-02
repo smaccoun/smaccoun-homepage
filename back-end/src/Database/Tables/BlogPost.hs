@@ -22,7 +22,6 @@ data BlogPostBaseT f
     = BlogPostBaseT
     { title   :: Columnar f Text
     , content :: Columnar f Text
-    , tags    :: Columnar f (V.Vector Text)
     } deriving (Generic)
 
 instance Beamable BlogPostBaseT
