@@ -19,6 +19,7 @@ initNewPost : BlogPost
 initNewPost =
     { title = ""
     , content = ""
+    , submitStatus = ""
     }
 
 
@@ -64,8 +65,10 @@ type Msg
     | SetContent String
     | ReceiveBlog (WebData BlogPostE)
     | ReceiveSubmittedBlog (WebData (MasterEntity BlogPost))
+    | ReceiveSavedBlog (WebData (MasterEntity BlogPost))
     | ReceiveEditedBlog (WebData (List String))
     | SubmitBlog
+    | SaveBlog
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -125,7 +128,11 @@ update msg model =
                         Editing bp ->
                             case bp of
                                 New bpNew ->
-                                    Cmd.map ReceiveSubmittedBlog <| submitPost model.context bpNew
+                                    let
+                                        bpSubmit =
+                                            { bpNew | submitStatus = "SUBMITTED" }
+                                    in
+                                    Cmd.map ReceiveSubmittedBlog <| submitPost model.context bpSubmit
 
                                 Existing { meta, baseEntity } ->
                                     let
@@ -136,7 +143,36 @@ update msg model =
                                             baseEntity
 
                                         ( uuid, bpBase ) =
-                                            ( appId, { title = title, content = content } )
+                                            ( appId, { title = title, content = content, submitStatus = "SUBMITTED" } )
+                                    in
+                                    Cmd.map ReceiveEditedBlog <| editPost model.context bpBase uuid
+
+                        _ ->
+                            Debug.crash "Impossible state"
+                  ]
+
+        SaveBlog ->
+            model
+                ! [ case model.viewState of
+                        Editing bp ->
+                            case bp of
+                                New bpNew ->
+                                    let
+                                        bpSubmit =
+                                            { bpNew | submitStatus = "SAVED" }
+                                    in
+                                    Cmd.map ReceiveSavedBlog <| submitPost model.context bpSubmit
+
+                                Existing { meta, baseEntity } ->
+                                    let
+                                        { updatedAt, appId, createdAt } =
+                                            meta
+
+                                        { title, content } =
+                                            baseEntity
+
+                                        ( uuid, bpBase ) =
+                                            ( appId, { title = title, content = content, submitStatus = "SAVED" } )
                                     in
                                     Cmd.map ReceiveEditedBlog <| editPost model.context bpBase uuid
 
@@ -163,6 +199,17 @@ update msg model =
                             "/blogPost"
                     in
                     Link.navigate model destination
+
+                RemoteData.Failure e ->
+                    Debug.crash "FAILED TO SUBMIT POST! "
+
+                _ ->
+                    model ! []
+
+        ReceiveSavedBlog result ->
+            case result of
+                RemoteData.Success r ->
+                    model ! []
 
                 RemoteData.Failure e ->
                     Debug.crash "FAILED TO SUBMIT POST! "
@@ -202,7 +249,7 @@ view model =
                                 bpNew
 
                             Existing { baseEntity } ->
-                                { title = baseEntity.title, content = baseEntity.content }
+                                baseEntity
                 in
                 [ column columnModifiers [] [ viewEditSection post ]
                 , column columnModifiers [] [ viewBlogPost Nothing post ]
@@ -221,6 +268,9 @@ viewEditSection { title, content } =
         , button { buttonModifiers | color = Primary }
             [ onClick SubmitBlog ]
             [ text "Submit" ]
+        , button { buttonModifiers | color = Primary }
+            [ onClick SaveBlog ]
+            [ text "Save" ]
         ]
 
 

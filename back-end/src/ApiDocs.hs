@@ -35,3 +35,4 @@ instance ToSchema LoginResponse
 instance ToSchema Password
 instance ToSchema BlogPostEntity
 instance ToSchema BlogPost
+instance ToSchema BlogPostSubmitStatus

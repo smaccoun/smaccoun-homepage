@@ -75,7 +75,9 @@ viewBlogPostEList : List BlogPostE -> Html Msg
 viewBlogPostEList posts =
     let
         allThumbsView =
-            List.map viewBlogPostEListThumb posts
+            posts
+                |> List.filter (\p -> p.baseEntity.submitStatus == "SUBMITTED")
+                |> List.map viewBlogPostEListThumb
     in
     div [ style [ ( "padding", "32px" ) ] ]
         [ columns blogPostColumnsModifiers
