@@ -1,6 +1,0 @@
-Configuring wai-cors-0.2.6...
-Preprocessing library for wai-cors-0.2.6..
-Building library for wai-cors-0.2.6..
-[1 of 1] Compiling Network.Wai.Middleware.Cors ( src/Network/Wai/Middleware/Cors.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Network/Wai/Middleware/Cors.o )
-Installing library in /Users/stevenmaccoun/projects/smaccoun-homepage/back-end/.stack-work/install/x86_64-osx/lts-11.2/8.2.2/lib/x86_64-osx-ghc-8.2.2/wai-cors-0.2.6-KzMqUaQ3J3JB8tUxzn7uNv
-Registering library for wai-cors-0.2.6..

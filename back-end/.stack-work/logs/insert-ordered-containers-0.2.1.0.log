@@ -1,6 +1,0 @@
-Configuring insert-ordered-containers-0.2.1.0...
-Preprocessing library for insert-ordered-containers-0.2.1.0..
-Building library for insert-ordered-containers-0.2.1.0..
-[1 of 1] Compiling Data.HashMap.Strict.InsOrd ( src/Data/HashMap/Strict/InsOrd.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Data/HashMap/Strict/InsOrd.o )
-Installing library in /Users/stevenmaccoun/projects/smaccoun-homepage/back-end/.stack-work/install/x86_64-osx/lts-11.2/8.2.2/lib/x86_64-osx-ghc-8.2.2/insert-ordered-containers-0.2.1.0-HGA6dqaq3kL5pv4A7SfDNt
-Registering library for insert-ordered-containers-0.2.1.0..

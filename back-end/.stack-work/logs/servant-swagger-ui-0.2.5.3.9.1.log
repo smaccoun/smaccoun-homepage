@@ -1,7 +1,0 @@
-Configuring servant-swagger-ui-0.2.5.3.9.1...
-Preprocessing library for servant-swagger-ui-0.2.5.3.9.1..
-Building library for servant-swagger-ui-0.2.5.3.9.1..
-[1 of 2] Compiling Servant.Swagger.UI.Internal ( src/Servant/Swagger/UI/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Servant/Swagger/UI/Internal.o )
-[2 of 2] Compiling Servant.Swagger.UI ( src/Servant/Swagger/UI.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Servant/Swagger/UI.o )
-Installing library in /Users/stevenmaccoun/projects/smaccoun-homepage/back-end/.stack-work/install/x86_64-osx/lts-11.2/8.2.2/lib/x86_64-osx-ghc-8.2.2/servant-swagger-ui-0.2.5.3.9.1-7tDCzNhMshWIW8ck8KukNR
-Registering library for servant-swagger-ui-0.2.5.3.9.1..

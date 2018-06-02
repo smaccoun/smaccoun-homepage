@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
         - name: "smaccoun-homepage-backend"
-          image: "smaccoun/smaccoun-homepage-backend:4775b007206bd0f67a23846086572a1161680042"
+          image: "smaccoun/smaccoun-homepage-backend:3b5b694117284c3566a900af5b5598569e87fa9f"
           envFrom:
             - configMapRef:
                 name: "smaccoun-homepage-envvars" 

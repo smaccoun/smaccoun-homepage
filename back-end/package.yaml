@@ -68,6 +68,7 @@ dependencies:
 - transformers
 - uuid
 - unordered-containers
+- vector
 - wai
 - wai-cors
 - wai-extra

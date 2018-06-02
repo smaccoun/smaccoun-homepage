@@ -11,6 +11,7 @@ module Database.Tables.BlogPost where
 
 import           AppPrelude
 import           Data.Aeson
+import qualified Data.Vector           as V
 import           Database.Beam
 import           Database.MasterEntity
 import           GHC.Generics          (Generic)
@@ -21,6 +22,7 @@ data BlogPostBaseT f
     = BlogPostBaseT
     { title   :: Columnar f Text
     , content :: Columnar f Text
+    , tags    :: Columnar f (V.Vector Text)
     } deriving (Generic)
 
 instance Beamable BlogPostBaseT
