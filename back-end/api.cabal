@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d1a3db109ae58316a9662b940d217bd9cebd3188d42876d99192179f7eef7678
+-- hash: 4dae66320d7b9ad3f740e343d9577fd9bf6d24a25f12c1ff3b370b3824fc7fe6
 
 name:           api
 version:        0.1.0.0
@@ -85,6 +85,7 @@ library
       Database.MasterEntity
       Database.Schema
       Database.Tables.BlogPost
+      Database.Tables.BlogPostTag
       Database.Tables.User
       Database.Transaction
       Init

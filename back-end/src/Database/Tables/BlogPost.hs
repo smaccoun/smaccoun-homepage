@@ -25,10 +25,16 @@ data BlogPostBaseT f
     = BlogPostBaseT
     { title         :: Columnar f Text
     , content       :: Columnar f Text
-    , submit_status ::  Columnar f BlogPostSubmitStatus
+    , submit_status :: Columnar f BlogPostSubmitStatus
     } deriving (Generic)
 
 instance Beamable BlogPostBaseT
+
+type BlogPost = BlogPostBaseT Identity
+type BlogPostEntity = BlogPostT Identity
+
+instance ToJSON BlogPost
+instance FromJSON BlogPost
 
 data BlogPostSubmitStatus =
     SUBMITTED | SAVED
@@ -54,9 +60,6 @@ instance FromField BlogPostSubmitStatus where
 instance HasSqlValueSyntax PgValueSyntax BlogPostSubmitStatus where
   sqlValueSyntax = autoSqlValueSyntax
 
-type BlogPost = BlogPostBaseT Identity
-type BlogPostEntity = BlogPostT Identity
 
-instance ToJSON BlogPost
-instance FromJSON BlogPost
+
 
