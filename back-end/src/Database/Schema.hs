@@ -9,6 +9,7 @@ import           Data.Text
 import           Database.Beam
 import           Database.Beam.Schema.Tables (renamingFields)
 import           Database.Tables.BlogPost
+import           Database.Tables.BlogPostTag
 import           Database.Tables.User
 import           Text.Regex
 
@@ -16,6 +17,7 @@ data MyAppDb f =
   MyAppDb
     { _users      :: f (TableEntity UserT)
     , _blog_posts :: f (TableEntity BlogPostT)
+    , _tags       :: f (TableEntity TagT)
     } deriving Generic
 
 makeLenses ''MyAppDb
@@ -34,3 +36,6 @@ userTable = appDb ^. users
 
 blogPostTable :: DatabaseEntity be MyAppDb (TableEntity BlogPostT)
 blogPostTable = appDb ^. blog_posts
+
+tagTable :: DatabaseEntity be MyAppDb (TableEntity TagT)
+tagTable = appDb ^. tags

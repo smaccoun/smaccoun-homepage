@@ -10,16 +10,16 @@
 module Database.Tables.BlogPostTag where
 
 import           AppPrelude
-import           Data.Aeson               (FromJSON, ToJSON)
+import           Data.Aeson            (FromJSON, ToJSON)
 import           Database.Beam
 import           Database.MasterEntity
-import           Database.Tables.BlogPost (BlogPostBaseT (..))
-import           GHC.Generics             (Generic)
+--import           Database.Tables.BlogPost (BlogPostBaseT (..))
+import           GHC.Generics          (Generic)
 
 
 data TagBaseT f
     = TagBaseT
-    { tagText :: Columnar f Text
+    { tagName :: Columnar f Text
     } deriving (Generic)
 
 instance Beamable TagBaseT
@@ -31,18 +31,18 @@ type Tag = TagBaseT Identity
 instance ToJSON Tag
 instance FromJSON Tag
 
-data BlogPostTagBaseT f
-    = BlogPostTagBaseT
-    { blogPostId  :: PrimaryKey (AppEntity BlogPostBaseT) f
-    , blogPostTag :: PrimaryKey TagT f
-    } deriving (Generic)
-
-instance Beamable BlogPostTagBaseT
-
-type BlogPostTagT = AppEntity BlogPostTagBaseT
-type BlogPostTagEntity = BlogPostTagT Identity
-type BlogPostTag = BlogPostTagBaseT Identity
-
-instance ToJSON BlogPostTag
-instance FromJSON BlogPostTag
+--data BlogPostTagBaseT f
+--    = BlogPostTagBaseT
+--    { blogPostId  :: PrimaryKey (AppEntity BlogPostBaseT) f
+--    , blogPostTag :: PrimaryKey TagT f
+--    } deriving (Generic)
+--
+--instance Beamable BlogPostTagBaseT
+--
+--type BlogPostTagT = AppEntity BlogPostTagBaseT
+--type BlogPostTagEntity = BlogPostTagT Identity
+--type BlogPostTag = BlogPostTagBaseT Identity
+--
+--instance ToJSON BlogPostTag
+--instance FromJSON BlogPostTag
 

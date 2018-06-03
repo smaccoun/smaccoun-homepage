@@ -18,6 +18,7 @@ import           Data.Text                           (Text)
 import           Database.Crud
 import           Database.Schema
 import           Database.Tables.BlogPost
+import           Database.Tables.BlogPostTag
 import           Models.User                         (UserResponse (..))
 import           Servant
 import           Servant.Auth.Server
@@ -39,6 +40,7 @@ type Unprotected =
        "health" :> Get '[JSON] Text
   :<|> LoginAPI
   :<|> REntityAPI "blogPost" BlogPostEntity
+  :<|> REntityAPI "tags" TagEntity
 
 unprotectedProxy :: Proxy Unprotected
 unprotectedProxy = Proxy
@@ -48,6 +50,7 @@ unprotected jwts =
        return "Okay"
   :<|> loginServer jwts
   :<|> rEntityServer blogPostTable
+  :<|> rEntityServer tagTable
 
 type API auths =
        (Auth auths UserResponse :> Protected)
