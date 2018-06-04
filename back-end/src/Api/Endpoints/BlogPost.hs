@@ -8,12 +8,14 @@ import           AppPrelude
 import           Config.AppConfig
 import           Data.Text                          (Text)
 import           Data.Time.Clock
+import qualified Data.UUID                          as U (UUID, toText)
 import           Data.Vector                        (Vector)
 import           Database.PostgreSQL.Simple
 import           Database.PostgreSQL.Simple.FromRow
 import           Database.Transaction
 
 data BlogPostR =
+
     BlogPostR
       {title        :: Text
       ,content      :: Text
@@ -47,5 +49,18 @@ createBlogPost title' content' submitStatus' tags' =
 getBlogPosts :: (HasDBConn r, MonadReader r m, MonadIO m)
            => m [BlogPostR]
 getBlogPosts =
-    runCustomQuery "SELECT * FROM blog_post_vw;" ()
+    runCustomQuery baseGetPostQuery ()
+
+getBlogPost :: (HasDBConn r, MonadReader r m, MonadIO m)
+           => U.UUID
+           -> m [BlogPostR]
+getBlogPost uuid' =
+    runCustomQuery fullQuery [id']
+    where
+        id' = U.toText uuid'
+        fullQuery = baseGetPostQuery <> " WHERE id=?"
+
+baseGetPostQuery :: Query
+baseGetPostQuery =
+    "SELECT * FROM blog_post_vw;"
 
