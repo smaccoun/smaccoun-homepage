@@ -1,6 +1,9 @@
-{-# LANGUAGE ConstraintKinds #-}
-{-# LANGUAGE RankNTypes      #-}
-{-# LANGUAGE TypeFamilies    #-}
+{-# LANGUAGE ConstraintKinds       #-}
+{-# LANGUAGE FlexibleContexts      #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE OverloadedStrings     #-}
+{-# LANGUAGE RankNTypes            #-}
+{-# LANGUAGE TypeFamilies          #-}
 
 module Database.Transaction where
 
@@ -13,6 +16,7 @@ import           Database.Beam.Postgres
 import           Database.Beam.Postgres.Syntax
 import           Database.Beam.Query
 import           Database.Beam.Schema.Tables
+import qualified Database.PostgreSQL.Simple               as Psql
 import           Init                                     (getConnFromPool)
 
 runSql :: DBConn -> Pg a -> IO a
@@ -61,3 +65,13 @@ runInsertM
 runInsertM table' insertStmt' = do
   runSqlM (runInsertReturningList table' insertStmt')
 
+
+
+runCustomQuery :: (Psql.ToRow q, Psql.FromRow a, MonadIO m, MonadReader r m, HasDBConn r)
+          => Psql.Query
+          -> q
+          -> m [a]
+runCustomQuery query' params' = do
+  pool' <- view dBConn
+  conn <- getConnFromPool pool'
+  liftIO $ Psql.query conn query' params'
